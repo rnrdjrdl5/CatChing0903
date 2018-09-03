@@ -1,0 +1,472 @@
+fileFormatVersion: 2
+guid: eca14672d836467408b7bea71bbc7e04
+timeCreated: 1525691610
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bip001
+    100004: Bip001 Footsteps
+    100006: Bip001 Head
+    100008: Bip001 HeadNub
+    100010: Bip001 L Calf
+    100012: Bip001 L Clavicle
+    100014: Bip001 L Finger0
+    100016: Bip001 L Finger01
+    100018: Bip001 L Finger02
+    100020: Bip001 L Finger0Nub
+    100022: Bip001 L Finger1
+    100024: Bip001 L Finger11
+    100026: Bip001 L Finger12
+    100028: Bip001 L Finger1Nub
+    100030: Bip001 L Finger2
+    100032: Bip001 L Finger21
+    100034: Bip001 L Finger22
+    100036: Bip001 L Finger2Nub
+    100038: Bip001 L Finger3
+    100040: Bip001 L Finger31
+    100042: Bip001 L Finger32
+    100044: Bip001 L Finger3Nub
+    100046: Bip001 L Foot
+    100048: Bip001 L Forearm
+    100050: Bip001 L Hand
+    100052: Bip001 L Thigh
+    100054: Bip001 L Toe0
+    100056: Bip001 L Toe0Nub
+    100058: Bip001 L UpperArm
+    100060: Bip001 Neck
+    100062: Bip001 Pelvis
+    100064: Bip001 Ponytail1
+    100066: Bip001 Ponytail1Nub
+    100068: Bip001 R Calf
+    100070: Bip001 R Clavicle
+    100072: Bip001 R Finger0
+    100074: Bip001 R Finger01
+    100076: Bip001 R Finger02
+    100078: Bip001 R Finger0Nub
+    100080: Bip001 R Finger1
+    100082: Bip001 R Finger11
+    100084: Bip001 R Finger12
+    100086: Bip001 R Finger1Nub
+    100088: Bip001 R Finger2
+    100090: Bip001 R Finger21
+    100092: Bip001 R Finger22
+    100094: Bip001 R Finger2Nub
+    100096: Bip001 R Finger3
+    100098: Bip001 R Finger31
+    100100: Bip001 R Finger32
+    100102: Bip001 R Finger3Nub
+    100104: Bip001 R Foot
+    100106: Bip001 R Forearm
+    100108: Bip001 R Hand
+    100110: Bip001 R Thigh
+    100112: Bip001 R Toe0
+    100114: Bip001 R Toe0Nub
+    100116: Bip001 R UpperArm
+    100118: Bip001 Spine
+    100120: Bip001 Spine1
+    100122: Cylinder003
+    100124: Cylinder003 1
+    100126: Object017
+    100128: Object019
+    100130: Plane001
+    100132: Plane002
+    100134: Plane003
+    100136: Plane004
+    100138: Plane005
+    100140: Plane006
+    100142: Plane007
+    100144: Plane008
+    100146: Plane009
+    100148: Plane010
+    100150: Plane011
+    100152: Plane012
+    100154: Plane013
+    100156: Plane014
+    100158: Plane015
+    100160: Plane016
+    100162: Plane017
+    100164: Plane018
+    100166: Plane019
+    100168: Plane020
+    100170: Plane021
+    100172: Plane022
+    100174: Plane023
+    100176: Plane024
+    100178: Plane025
+    100180: Plane026
+    100182: Plane027
+    100184: Plane028
+    100186: Plane029
+    100188: Plane030
+    100190: Plane031
+    100192: Plane032
+    100194: Plane033
+    100196: Plane034
+    100198: Plane035
+    100200: Plane036
+    100202: Plane037
+    100204: Plane038
+    100206: Plane039
+    100208: Plane040
+    100210: Plane041
+    100212: Plane042
+    100214: Plane055
+    100216: Plane056
+    100218: Plane057
+    400000: //RootNode
+    400002: Bip001
+    400004: Bip001 Footsteps
+    400006: Bip001 Head
+    400008: Bip001 HeadNub
+    400010: Bip001 L Calf
+    400012: Bip001 L Clavicle
+    400014: Bip001 L Finger0
+    400016: Bip001 L Finger01
+    400018: Bip001 L Finger02
+    400020: Bip001 L Finger0Nub
+    400022: Bip001 L Finger1
+    400024: Bip001 L Finger11
+    400026: Bip001 L Finger12
+    400028: Bip001 L Finger1Nub
+    400030: Bip001 L Finger2
+    400032: Bip001 L Finger21
+    400034: Bip001 L Finger22
+    400036: Bip001 L Finger2Nub
+    400038: Bip001 L Finger3
+    400040: Bip001 L Finger31
+    400042: Bip001 L Finger32
+    400044: Bip001 L Finger3Nub
+    400046: Bip001 L Foot
+    400048: Bip001 L Forearm
+    400050: Bip001 L Hand
+    400052: Bip001 L Thigh
+    400054: Bip001 L Toe0
+    400056: Bip001 L Toe0Nub
+    400058: Bip001 L UpperArm
+    400060: Bip001 Neck
+    400062: Bip001 Pelvis
+    400064: Bip001 Ponytail1
+    400066: Bip001 Ponytail1Nub
+    400068: Bip001 R Calf
+    400070: Bip001 R Clavicle
+    400072: Bip001 R Finger0
+    400074: Bip001 R Finger01
+    400076: Bip001 R Finger02
+    400078: Bip001 R Finger0Nub
+    400080: Bip001 R Finger1
+    400082: Bip001 R Finger11
+    400084: Bip001 R Finger12
+    400086: Bip001 R Finger1Nub
+    400088: Bip001 R Finger2
+    400090: Bip001 R Finger21
+    400092: Bip001 R Finger22
+    400094: Bip001 R Finger2Nub
+    400096: Bip001 R Finger3
+    400098: Bip001 R Finger31
+    400100: Bip001 R Finger32
+    400102: Bip001 R Finger3Nub
+    400104: Bip001 R Foot
+    400106: Bip001 R Forearm
+    400108: Bip001 R Hand
+    400110: Bip001 R Thigh
+    400112: Bip001 R Toe0
+    400114: Bip001 R Toe0Nub
+    400116: Bip001 R UpperArm
+    400118: Bip001 Spine
+    400120: Bip001 Spine1
+    400122: Cylinder003
+    400124: Cylinder003 1
+    400126: Object017
+    400128: Object019
+    400130: Plane001
+    400132: Plane002
+    400134: Plane003
+    400136: Plane004
+    400138: Plane005
+    400140: Plane006
+    400142: Plane007
+    400144: Plane008
+    400146: Plane009
+    400148: Plane010
+    400150: Plane011
+    400152: Plane012
+    400154: Plane013
+    400156: Plane014
+    400158: Plane015
+    400160: Plane016
+    400162: Plane017
+    400164: Plane018
+    400166: Plane019
+    400168: Plane020
+    400170: Plane021
+    400172: Plane022
+    400174: Plane023
+    400176: Plane024
+    400178: Plane025
+    400180: Plane026
+    400182: Plane027
+    400184: Plane028
+    400186: Plane029
+    400188: Plane030
+    400190: Plane031
+    400192: Plane032
+    400194: Plane033
+    400196: Plane034
+    400198: Plane035
+    400200: Plane036
+    400202: Plane037
+    400204: Plane038
+    400206: Plane039
+    400208: Plane040
+    400210: Plane041
+    400212: Plane042
+    400214: Plane055
+    400216: Plane056
+    400218: Plane057
+    2300000: Cylinder003
+    2300002: Cylinder003 1
+    2300004: Plane001
+    2300006: Plane002
+    2300008: Plane003
+    2300010: Plane004
+    2300012: Plane005
+    2300014: Plane006
+    2300016: Plane007
+    2300018: Plane008
+    2300020: Plane009
+    2300022: Plane010
+    2300024: Plane011
+    2300026: Plane012
+    2300028: Plane013
+    2300030: Plane014
+    2300032: Plane015
+    2300034: Plane016
+    2300036: Plane017
+    2300038: Plane018
+    2300040: Plane019
+    2300042: Plane020
+    2300044: Plane021
+    2300046: Plane022
+    2300048: Plane023
+    2300050: Plane024
+    2300052: Plane025
+    2300054: Plane026
+    2300056: Plane027
+    2300058: Plane028
+    2300060: Plane029
+    2300062: Plane030
+    2300064: Plane031
+    2300066: Plane032
+    2300068: Plane033
+    2300070: Plane034
+    2300072: Plane035
+    2300074: Plane036
+    2300076: Plane037
+    2300078: Plane038
+    2300080: Plane039
+    2300082: Plane040
+    2300084: Plane041
+    2300086: Plane042
+    2300088: Plane055
+    2300090: Plane056
+    2300092: Plane057
+    3300000: Cylinder003
+    3300002: Cylinder003 1
+    3300004: Plane001
+    3300006: Plane002
+    3300008: Plane003
+    3300010: Plane004
+    3300012: Plane005
+    3300014: Plane006
+    3300016: Plane007
+    3300018: Plane008
+    3300020: Plane009
+    3300022: Plane010
+    3300024: Plane011
+    3300026: Plane012
+    3300028: Plane013
+    3300030: Plane014
+    3300032: Plane015
+    3300034: Plane016
+    3300036: Plane017
+    3300038: Plane018
+    3300040: Plane019
+    3300042: Plane020
+    3300044: Plane021
+    3300046: Plane022
+    3300048: Plane023
+    3300050: Plane024
+    3300052: Plane025
+    3300054: Plane026
+    3300056: Plane027
+    3300058: Plane028
+    3300060: Plane029
+    3300062: Plane030
+    3300064: Plane031
+    3300066: Plane032
+    3300068: Plane033
+    3300070: Plane034
+    3300072: Plane035
+    3300074: Plane036
+    3300076: Plane037
+    3300078: Plane038
+    3300080: Plane039
+    3300082: Plane040
+    3300084: Plane041
+    3300086: Plane042
+    3300088: Plane055
+    3300090: Plane056
+    3300092: Plane057
+    4300000: Object017
+    4300002: Object019
+    4300004: Cylinder003
+    4300006: Plane040
+    4300008: Plane022
+    4300010: Plane057
+    4300012: Plane041
+    4300014: Plane014
+    4300016: Plane015
+    4300018: Plane016
+    4300020: Plane005
+    4300022: Plane004
+    4300024: Plane007
+    4300026: Plane009
+    4300028: Plane006
+    4300030: Plane008
+    4300032: Plane002
+    4300034: Plane003
+    4300036: Plane001
+    4300038: Plane010
+    4300040: Plane012
+    4300042: Plane011
+    4300044: Plane013
+    4300046: Plane018
+    4300048: Plane017
+    4300050: Plane029
+    4300052: Plane031
+    4300054: Plane024
+    4300056: Plane037
+    4300058: Plane039
+    4300060: Plane030
+    4300062: Plane021
+    4300064: Plane032
+    4300066: Plane036
+    4300068: Plane056
+    4300070: Plane027
+    4300072: Plane042
+    4300074: Plane028
+    4300076: Plane055
+    4300078: Plane019
+    4300080: Plane023
+    4300082: Plane025
+    4300084: Plane020
+    4300086: Plane026
+    4300088: Plane033
+    4300090: Plane034
+    4300092: Plane038
+    4300094: Plane035
+    4300096: Cylinder003
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Object017
+    13700002: Object019
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default
+    second: {fileID: 2100000, guid: b8851b66eecc0e344a646a8efbfa4b85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #26'
+    second: {fileID: 2100000, guid: 402b9c709011a0948a2e4951926fd324, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 4d83bb16ef2b6124daee5da68c1a3564, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Mouse_boy_F_Mouse_boy_F19___Default
+    second: {fileID: 2100000, guid: 01fed38dc6620c242b039b5198920cc1, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

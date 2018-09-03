@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: e3d68ae17ff7a694ba50e2753f88194e
+timeCreated: 1528646870
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Glass001
+    100002: Modeling_2nd_Floor_Circle1
+    100004: Modeling_2nd_Floor_Circle2
+    100006: Modeling_2nd_Floor_Circle3
+    100008: Modeling_2nd_Floor_Corner_L
+    100010: Modeling_2nd_Floor_Corner_R
+    100012: //RootNode
+    100014: Modeling_Handrail
+    100016: Modeling_Handrail_Circle
+    100018: Modeling_Handrail_Circle2
+    100020: Modeling_Handrail_Circle3
+    100022: Modeling_Handrail_MeshPart0
+    100024: Modeling_Handrail_MeshPart1
+    100026: Modeling_Handrail_MeshPart2
+    100028: Modeling_Handrail_MeshPart3
+    100030: Modeling_Stairs
+    100032: Modeling_threshorld1
+    100034: Modeling_threshorld2
+    100036: Modeling_threshorld3
+    100038: Modeling_threshorld4
+    100040: Modeling_threshorld5
+    100042: Modeling_threshorld_Circle
+    100044: Modeling_threshorld_Circle2
+    100046: Modeling_threshorld_Circle3
+    400000: Glass001
+    400002: Modeling_2nd_Floor_Circle1
+    400004: Modeling_2nd_Floor_Circle2
+    400006: Modeling_2nd_Floor_Circle3
+    400008: Modeling_2nd_Floor_Corner_L
+    400010: Modeling_2nd_Floor_Corner_R
+    400012: //RootNode
+    400014: Modeling_Handrail
+    400016: Modeling_Handrail_Circle
+    400018: Modeling_Handrail_Circle2
+    400020: Modeling_Handrail_Circle3
+    400022: Modeling_Handrail_MeshPart0
+    400024: Modeling_Handrail_MeshPart1
+    400026: Modeling_Handrail_MeshPart2
+    400028: Modeling_Handrail_MeshPart3
+    400030: Modeling_Stairs
+    400032: Modeling_threshorld1
+    400034: Modeling_threshorld2
+    400036: Modeling_threshorld3
+    400038: Modeling_threshorld4
+    400040: Modeling_threshorld5
+    400042: Modeling_threshorld_Circle
+    400044: Modeling_threshorld_Circle2
+    400046: Modeling_threshorld_Circle3
+    2300000: Glass001
+    2300002: Modeling_2nd_Floor_Circle1
+    2300004: Modeling_2nd_Floor_Circle2
+    2300006: Modeling_2nd_Floor_Circle3
+    2300008: Modeling_2nd_Floor_Corner_L
+    2300010: Modeling_2nd_Floor_Corner_R
+    2300012: Modeling_Handrail_Circle
+    2300014: Modeling_Handrail_Circle2
+    2300016: Modeling_Handrail_Circle3
+    2300018: Modeling_Handrail_MeshPart0
+    2300020: Modeling_Handrail_MeshPart1
+    2300022: Modeling_Handrail_MeshPart2
+    2300024: Modeling_Handrail_MeshPart3
+    2300026: Modeling_Stairs
+    2300028: Modeling_threshorld1
+    2300030: Modeling_threshorld2
+    2300032: Modeling_threshorld3
+    2300034: Modeling_threshorld4
+    2300036: Modeling_threshorld5
+    2300038: Modeling_threshorld_Circle
+    2300040: Modeling_threshorld_Circle2
+    2300042: Modeling_threshorld_Circle3
+    3300000: Glass001
+    3300002: Modeling_2nd_Floor_Circle1
+    3300004: Modeling_2nd_Floor_Circle2
+    3300006: Modeling_2nd_Floor_Circle3
+    3300008: Modeling_2nd_Floor_Corner_L
+    3300010: Modeling_2nd_Floor_Corner_R
+    3300012: Modeling_Handrail_Circle
+    3300014: Modeling_Handrail_Circle2
+    3300016: Modeling_Handrail_Circle3
+    3300018: Modeling_Handrail_MeshPart0
+    3300020: Modeling_Handrail_MeshPart1
+    3300022: Modeling_Handrail_MeshPart2
+    3300024: Modeling_Handrail_MeshPart3
+    3300026: Modeling_Stairs
+    3300028: Modeling_threshorld1
+    3300030: Modeling_threshorld2
+    3300032: Modeling_threshorld3
+    3300034: Modeling_threshorld4
+    3300036: Modeling_threshorld5
+    3300038: Modeling_threshorld_Circle
+    3300040: Modeling_threshorld_Circle2
+    3300042: Modeling_threshorld_Circle3
+    4300000: Modeling_Stairs
+    4300002: Modeling_2nd_Floor_Corner_L
+    4300004: Modeling_2nd_Floor_Corner_R
+    4300006: Glass001
+    4300008: Modeling_Handrail_Circle3
+    4300010: Modeling_Handrail_MeshPart0
+    4300012: Modeling_Handrail_MeshPart1
+    4300014: Modeling_Handrail_MeshPart2
+    4300016: Modeling_Handrail_MeshPart3
+    4300018: Modeling_Handrail_Circle
+    4300020: Modeling_threshorld1
+    4300022: Modeling_2nd_Floor_Circle1
+    4300024: Modeling_threshorld_Circle
+    4300026: Modeling_threshorld2
+    4300028: Modeling_threshorld3
+    4300030: Modeling_threshorld_Circle3
+    4300032: Modeling_threshorld4
+    4300034: Modeling_threshorld_Circle2
+    4300036: Modeling_threshorld5
+    4300038: Modeling_Handrail_Circle2
+    4300040: Modeling_2nd_Floor_Circle3
+    4300042: Modeling_2nd_Floor_Circle2
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 19 - Default
+    second: {fileID: 2100000, guid: 8b19bf4a8e2b68443ad97e77c5a7d7f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 20 - Default
+    second: {fileID: 2100000, guid: 1b76c0a951108124e8260a0aee9a5a55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 21 - Default
+    second: {fileID: 2100000, guid: f8ec258e12e7fdc44aa42bfd7d8693b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 22 - Default
+    second: {fileID: 2100000, guid: 1393228c2b4759942b401f9b5f9c37c3, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

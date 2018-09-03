@@ -1,0 +1,389 @@
+fileFormatVersion: 2
+guid: 17d64c5c590959543b4a4597d837407b
+timeCreated: 1529340729
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bip001
+    100004: Bip001 Footsteps
+    100006: Bip001 Head
+    100008: Bip001 HeadNub
+    100010: Bip001 L Calf
+    100012: Bip001 L Clavicle
+    100014: Bip001 L Finger0
+    100016: Bip001 L Finger0Nub
+    100018: Bip001 L Foot
+    100020: Bip001 L Forearm
+    100022: Bip001 L Hand
+    100024: Bip001 L Thigh
+    100026: Bip001 L Toe0
+    100028: Bip001 L Toe01
+    100030: Bip001 L Toe02
+    100032: Bip001 L Toe0Nub
+    100034: Bip001 L UpperArm
+    100036: Bip001 Neck
+    100038: Bip001 Pelvis
+    100040: Bip001 R Calf
+    100042: Bip001 R Clavicle
+    100044: Bip001 R Finger0
+    100046: Bip001 R Finger0Nub
+    100048: Bip001 R Foot
+    100050: Bip001 R Forearm
+    100052: Bip001 R Hand
+    100054: Bip001 R Thigh
+    100056: Bip001 R Toe0
+    100058: Bip001 R Toe01
+    100060: Bip001 R Toe02
+    100062: Bip001 R Toe0Nub
+    100064: Bip001 R UpperArm
+    100066: Bip001 Spine
+    100068: Bip001 Spine1
+    100070: Bip001 Spine2
+    100072: Bip001 Spine3
+    100074: Etc
+    100076: Etc004
+    100078: Etc006
+    100080: Etc008
+    100082: Etc071
+    100084: Etc072
+    100086: Etc073
+    100088: Etc074
+    100090: Etc075
+    100092: Etc076
+    100094: Face
+    100096: Face003
+    100098: Face008
+    100100: Face020
+    100102: Face021
+    100104: Face022
+    100106: Face023
+    100108: Face024
+    100110: Face025
+    100112: Face026
+    100114: Face1
+    100116: Face19
+    100118: Face2
+    100120: Neko_bell
+    100122: Neko_head
+    100124: Object001
+    100126: Object001 1
+    100128: Object002
+    100130: Object002 1
+    100132: Object002 1_MeshPart0
+    100134: Object002 1_MeshPart1
+    100136: Object003
+    100138: Object003_MeshPart0
+    100140: Object003_MeshPart1
+    100142: Object004
+    100144: Object004_MeshPart0
+    100146: Object004_MeshPart1
+    100148: Object004_MeshPart2
+    100150: Object005
+    100152: Object005_MeshPart0
+    100154: Object005_MeshPart1
+    100156: Object006
+    100158: Object006_MeshPart0
+    100160: Object006_MeshPart1
+    100162: Object007
+    100164: Object007_MeshPart0
+    100166: Object007_MeshPart1
+    100168: rope
+    100170: rope_MeshPart0
+    100172: rope_MeshPart1
+    100174: rope_MeshPart2
+    400000: //RootNode
+    400002: Bip001
+    400004: Bip001 Footsteps
+    400006: Bip001 Head
+    400008: Bip001 HeadNub
+    400010: Bip001 L Calf
+    400012: Bip001 L Clavicle
+    400014: Bip001 L Finger0
+    400016: Bip001 L Finger0Nub
+    400018: Bip001 L Foot
+    400020: Bip001 L Forearm
+    400022: Bip001 L Hand
+    400024: Bip001 L Thigh
+    400026: Bip001 L Toe0
+    400028: Bip001 L Toe01
+    400030: Bip001 L Toe02
+    400032: Bip001 L Toe0Nub
+    400034: Bip001 L UpperArm
+    400036: Bip001 Neck
+    400038: Bip001 Pelvis
+    400040: Bip001 R Calf
+    400042: Bip001 R Clavicle
+    400044: Bip001 R Finger0
+    400046: Bip001 R Finger0Nub
+    400048: Bip001 R Foot
+    400050: Bip001 R Forearm
+    400052: Bip001 R Hand
+    400054: Bip001 R Thigh
+    400056: Bip001 R Toe0
+    400058: Bip001 R Toe01
+    400060: Bip001 R Toe02
+    400062: Bip001 R Toe0Nub
+    400064: Bip001 R UpperArm
+    400066: Bip001 Spine
+    400068: Bip001 Spine1
+    400070: Bip001 Spine2
+    400072: Bip001 Spine3
+    400074: Etc
+    400076: Etc004
+    400078: Etc006
+    400080: Etc008
+    400082: Etc071
+    400084: Etc072
+    400086: Etc073
+    400088: Etc074
+    400090: Etc075
+    400092: Etc076
+    400094: Face
+    400096: Face003
+    400098: Face008
+    400100: Face020
+    400102: Face021
+    400104: Face022
+    400106: Face023
+    400108: Face024
+    400110: Face025
+    400112: Face026
+    400114: Face1
+    400116: Face19
+    400118: Face2
+    400120: Neko_bell
+    400122: Neko_head
+    400124: Object001
+    400126: Object001 1
+    400128: Object002
+    400130: Object002 1
+    400132: Object002 1_MeshPart0
+    400134: Object002 1_MeshPart1
+    400136: Object003
+    400138: Object003_MeshPart0
+    400140: Object003_MeshPart1
+    400142: Object004
+    400144: Object004_MeshPart0
+    400146: Object004_MeshPart1
+    400148: Object004_MeshPart2
+    400150: Object005
+    400152: Object005_MeshPart0
+    400154: Object005_MeshPart1
+    400156: Object006
+    400158: Object006_MeshPart0
+    400160: Object006_MeshPart1
+    400162: Object007
+    400164: Object007_MeshPart0
+    400166: Object007_MeshPart1
+    400168: rope
+    400170: rope_MeshPart0
+    400172: rope_MeshPart1
+    400174: rope_MeshPart2
+    2300000: Etc004
+    2300002: Etc008
+    2300004: Etc071
+    2300006: Etc072
+    2300008: Etc073
+    2300010: Etc074
+    2300012: Etc075
+    2300014: Etc076
+    2300016: Face003
+    2300018: Face008
+    2300020: Face020
+    2300022: Face021
+    2300024: Face022
+    2300026: Face023
+    2300028: Face024
+    2300030: Face025
+    2300032: Face026
+    2300034: Face1
+    2300036: Face19
+    2300038: Face2
+    2300040: Object001
+    2300042: Object002
+    3300000: Etc004
+    3300002: Etc008
+    3300004: Etc071
+    3300006: Etc072
+    3300008: Etc073
+    3300010: Etc074
+    3300012: Etc075
+    3300014: Etc076
+    3300016: Face003
+    3300018: Face008
+    3300020: Face020
+    3300022: Face021
+    3300024: Face022
+    3300026: Face023
+    3300028: Face024
+    3300030: Face025
+    3300032: Face026
+    3300034: Face1
+    3300036: Face19
+    3300038: Face2
+    3300040: Object001
+    3300042: Object002
+    4300000: Neko_head
+    4300002: Neko_bell
+    4300004: rope_MeshPart0
+    4300006: rope_MeshPart1
+    4300008: rope_MeshPart2
+    4300010: Object001
+    4300012: Face
+    4300014: Object002_MeshPart0
+    4300016: Object002_MeshPart1
+    4300018: Object003_MeshPart0
+    4300020: Object003_MeshPart1
+    4300022: Object004_MeshPart0
+    4300024: Object004_MeshPart1
+    4300026: Object004_MeshPart2
+    4300028: Object005_MeshPart0
+    4300030: Object005_MeshPart1
+    4300032: Object006_MeshPart0
+    4300034: Object006_MeshPart1
+    4300036: Object007_MeshPart0
+    4300038: Object007_MeshPart1
+    4300040: Object001
+    4300042: Face2
+    4300044: Face19
+    4300046: Face1
+    4300048: Etc004
+    4300050: Object002
+    4300052: Face003
+    4300054: Face008
+    4300056: Face020
+    4300058: Etc008
+    4300060: Face021
+    4300062: Face022
+    4300064: Etc071
+    4300066: Face023
+    4300068: Etc072
+    4300070: Face024
+    4300072: Etc073
+    4300074: Face025
+    4300076: Etc074
+    4300078: Face026
+    4300080: Etc075
+    4300082: Etc076
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Face
+    13700002: Neko_bell
+    13700004: Neko_head
+    13700006: Object001 1
+    13700008: Object002 1_MeshPart0
+    13700010: Object002 1_MeshPart1
+    13700012: Object003_MeshPart0
+    13700014: Object003_MeshPart1
+    13700016: Object004_MeshPart0
+    13700018: Object004_MeshPart1
+    13700020: Object004_MeshPart2
+    13700022: Object005_MeshPart0
+    13700024: Object005_MeshPart1
+    13700026: Object006_MeshPart0
+    13700028: Object006_MeshPart1
+    13700030: Object007_MeshPart0
+    13700032: Object007_MeshPart1
+    13700034: rope_MeshPart0
+    13700036: rope_MeshPart1
+    13700038: rope_MeshPart2
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 19 - Default
+    second: {fileID: 2100000, guid: 74c7072732d6f2a49b72fce924cc3856, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #3'
+    second: {fileID: 2100000, guid: 1a4c0e307bade0f4591f872a1f0de76b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 5b69b9da589625441b2fd1842b5f63eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire_184228153
+    second: {fileID: 2100000, guid: 1a4c0e307bade0f4591f872a1f0de76b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
