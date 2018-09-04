@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Programming/Scenes/Lobby.unity
-    guid: 421c953841979aa46a2c57611890a790
+    path: Assets/Opening/Opening_Scene_ReleaseScript.unity
+    guid: d09aca0d830facd4cab607effec285f9
   - enabled: 1
     path: Assets/Cat_Ching_Graphic_Forder/Scene/Build_Scene_04.unity
     guid: 9a97bdf84326f0245891e6003a64a7b5
   - enabled: 1
     path: Assets/Programming/Scenes/Loading.unity
     guid: 6aa68c5d0e32660439418d5b61f9ee08
+  - enabled: 1
+    path: Assets/Programming/Scenes/TitleLogo.unity
+    guid: 7ad3ddec42a71774ab251479bbed6b02

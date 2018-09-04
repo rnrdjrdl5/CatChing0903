@@ -18,7 +18,7 @@ public class NewLobbyRoomPhoton : Photon.PunBehaviour
     public XMLManager xmlManager;               // XML 전용
 
 
-    private enum EnumGameState { LOBBY, FINDROOM, ROOM, TITLE }
+    private enum EnumGameState { LOBBY, FINDROOM, ROOM, TITLE , NONE}
     private EnumGameState gameStateType;
 
 
@@ -49,9 +49,9 @@ public class NewLobbyRoomPhoton : Photon.PunBehaviour
 
     private void Awake()
     {
-        gameStateType = EnumGameState.TITLE;
+        gameStateType = EnumGameState.NONE;
 
-        isUseEvent = true;
+        isUseEvent = false;
         MenuBook = GameObject.Find("MenuBook").gameObject;
         MenuBookAnimator = MenuBook.transform.Find("menu2").GetComponent<Animator>();
 
@@ -81,7 +81,9 @@ public class NewLobbyRoomPhoton : Photon.PunBehaviour
 
         LobbyRoomMouseSetting();
 
-        soundManager.PlayBGSound(SoundManager.EnumBGSound.BG_LOBBY_SOUND);
+        // soundManager.PlayBGSound(SoundManager.EnumBGSound.BG_LOBBY_SOUND);
+
+        StartCoroutine("FadeInGame");
 
     }
 
@@ -175,6 +177,21 @@ public class NewLobbyRoomPhoton : Photon.PunBehaviour
         yield return new WaitForSeconds(lobbyUIManager.UIFadeTime);
 
         isUseEvent = true;
+    }
+
+    IEnumerator FadeInGame()
+    {
+        // 새운드 재생과 함께 숨겨진 로고이미지 삭제
+        soundManager.PlayBGSound(SoundManager.EnumBGSound.BG_LOBBY_SOUND);
+
+
+        lobbyUIManager.fadePanelScript.FadeOutEffect();
+        yield return new WaitForSeconds(lobbyUIManager.UIFadeTime);
+
+        lobbyUIManager.fadePanelScript.SetActive(false);
+
+        isUseEvent = true;
+        gameStateType = EnumGameState.TITLE;
     }
 
     // 플레이어 리스트 초기화 후 정렬

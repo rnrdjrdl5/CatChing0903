@@ -26,6 +26,8 @@ public class LobbyUIManager : MonoBehaviour {
     public RoomPanelScript roomPanelScript;
     public WaitingRoomPanelScript waitingRoomPanelScript;
 
+    public FadePanelScript fadePanelScript;
+
     private void Awake()
     {
         if (lobbyUIManager == null)
@@ -58,6 +60,10 @@ public class LobbyUIManager : MonoBehaviour {
 
         waitingRoomPanelScript = new WaitingRoomPanelScript();
         waitingRoomPanelScript.InitData();
+
+        fadePanelScript = new FadePanelScript();
+        fadePanelScript.InitData();
+
     }
    
     
