@@ -7,6 +7,8 @@ using UnityEngine;
 // 점수를 확인하기 위해서도 사용
 public class ObjectManager : MonoBehaviour {
 
+    private const int MAX_OBJECT_TYPE = 11;
+
     private static ObjectManager objectManager;
     public static ObjectManager GetInstance() { return objectManager; }
 
@@ -18,9 +20,14 @@ public class ObjectManager : MonoBehaviour {
     public delegate void RemoveDele();
     public event RemoveDele RemoveEvent;
 
+    // 아래부터는 오브젝트 카운팅 용 변수 입니다.
+
+    private int[] mountObjects;
+
     private void Awake()
     {
         objectManager = this;
+        mountObjects = new int[MAX_OBJECT_TYPE + 1];        // Enum 시작점이 1이라서.
     }
 
     private void Start()
@@ -84,5 +91,51 @@ public class ObjectManager : MonoBehaviour {
 
     }
 
+    public void IncObjectCount(InteractiveState.EnumInteractiveObject enumInteractiveObject , 
+        int objectHeight)
+    {
 
+        mountObjects[(int)enumInteractiveObject] += objectHeight;
+
+        Debug.Log(mountObjects[(int)enumInteractiveObject]);
+
+    }
+
+    public void DeleteObjPropPlayer()
+    {
+
+        //foreach (GameObject go in InterObj)
+        for (int i = InterObj.Count-1; i >= 0; i--)
+        
+        {
+            
+            InteractiveState IS = InterObj[i].GetComponent<InteractiveState>();
+
+
+            if(IS != null)
+            {
+
+                if (photonManager == null)
+                {
+                    Debug.Log("없음");
+                    return;
+                }
+                if (photonManager.MousePlayerListOneSort.Count <
+                    IS.MinPlayerMount && 
+                    IS.MinPlayerMount != 0)
+                {
+                    InterObj.Remove(IS.gameObject);
+                    IS.gameObject.SetActive(false);
+
+                    Debug.Log("삭***제완료");
+                }
+
+
+                
+                
+            }
+        }
+        Debug.Log("수행중");
+    }
+    
 }

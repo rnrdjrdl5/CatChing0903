@@ -14,7 +14,10 @@ public class PhotonManager : Photon.PunBehaviour , IPunObservable
 
     // 싱글톤
     private static PhotonManager photonManager;
-    public static PhotonManager GetInstance() { return photonManager; }
+    public static PhotonManager GetInstance() {
+        if (photonManager == null) return null;
+
+        return photonManager; }
 
 
 
@@ -980,22 +983,6 @@ public class PhotonManager : Photon.PunBehaviour , IPunObservable
 
         }
 
-        /*uIManager.hpPanelScript.SetHealthPoint(true);
-
-
-
-        uIManager.limitTimePanelScript.SetLimitTime(true);
-        UpdateTimeEvent = uIManager.limitTimePanelScript.TimeTickUpdateEvent;
-
-        uIManager.SetAim(true);
-        uIManager.mouseImagePanelScript.MouseImagePanel.SetActive(true);
-
-        uIManager.gradePanelScript.GradePanel.SetActive(true);
-        uIManager.gradePanelScript.SetActiveObjects(true);
-
-        uIManager.skillPanelScript.SkillPanel.SetActive(true);
-
-        uIManager.pressImagePanelScript.PressImagePanel.SetActive(true);*/
 
         // 오브젝트 랜덤 스폰
         RandomObjectSpawn randomObjectSpawn = GetComponent<RandomObjectSpawn>();    
@@ -1005,9 +992,14 @@ public class PhotonManager : Photon.PunBehaviour , IPunObservable
 
         uIManager.selectCharPanelScript.isUseDelay = true;
 
-        Debug.Log("tttt");
+        // 삭제해야함.
 
+        if (objectManager != null)
+        {
 
+            objectManager.DeleteObjPropPlayer();
+            Debug.Log("수행완료");
+        }
 
     }
 

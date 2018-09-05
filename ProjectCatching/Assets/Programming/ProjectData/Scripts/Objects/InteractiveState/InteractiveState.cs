@@ -14,6 +14,7 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
 
         FRAME
     };
+    
 
     // 물체의 액션 적용 방식
     public enum EnumAction
@@ -74,7 +75,11 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
     [Header(" - 상호작용 위치 변경 시 사용")]
     public GameObject NextPosition;
 
+    [Header("- 플레이어 인원에 따른 소멸여부")]
+    public int MinPlayerMount;
 
+    [Header("- 가중치")]
+    public int ObjectHeight;
 
 
     public bool IsUseAction { get; set; }
@@ -134,7 +139,7 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
 
     // Use this for initialization
 
-        private void Awake()
+    private void Awake()
     {
         InterMaterials = new List<Material>();
         InterTexture = new List<Texture>();
@@ -144,6 +149,8 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
 
         objectManager = GameObject.Find("ObjectManager").GetComponent<ObjectManager>();
         objectManager.AddInterObj(gameObject);
+
+        
 
         animator = GetComponent<Animator>();
 
@@ -168,7 +175,11 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
 
     }
 
-    
+    private void Start()
+    {
+        objectManager.IncObjectCount(interactiveObjectType , ObjectHeight);
+    }
+
 
     void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {

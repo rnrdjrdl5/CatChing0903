@@ -258,9 +258,6 @@ private bool StandardMoveEffect()
             FadeImage.color.b,
             AlphaColor);
 
-        Debug.Log(FadeImage.color.a);
-        Debug.Log(" Target : " + FadeImage.name);
-
         return true;
     }
 
