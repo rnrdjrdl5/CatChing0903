@@ -43,7 +43,6 @@ public class NewLoadingPhoton : Photon.PunBehaviour{
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log("반응좀");
 
         CheckFinishAllLoading();
 

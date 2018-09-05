@@ -87,12 +87,12 @@ public class GradePanelScript{
 
     void UpdateGrade()
     {
-        int CatGradeScore = 0;
+        float CatGradeScore = 0;
         for (int i = 0; i < PhotonNetwork.playerList.Length; i++)
         {
             if ((string)PhotonNetwork.playerList[i].CustomProperties["PlayerType"] == "Cat")
             {
-                CatGradeScore = (int)PhotonNetwork.playerList[i].CustomProperties["CatScore"];
+                CatGradeScore = (float)PhotonNetwork.playerList[i].CustomProperties["CatScore"];
                 break;
             }
         }

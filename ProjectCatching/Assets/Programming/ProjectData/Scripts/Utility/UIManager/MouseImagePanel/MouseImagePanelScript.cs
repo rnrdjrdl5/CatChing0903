@@ -156,22 +156,6 @@ public class MouseImagePanelScript  {
         return photonPlayers;
     }
 
-    // 쥐 플레이어 점수기준으로 정렬
-    private void PointSortMousePlayer(List<PhotonPlayer> photonPlayer)
-    {
-        photonPlayer.Sort(
-                          (PhotonPlayer One, PhotonPlayer Two) =>
-                            {
-                                if ((int)One.CustomProperties["MouseScore"] > (int)Two.CustomProperties["MouseScore"])
-                                    return 1;
-                                else if ((int)One.CustomProperties["MouseScore"] < (int)Two.CustomProperties["MouseScore"])
-                                    return -1;
-                                return 0;
-
-                            }
-                        );
-    }
-
     public void InitData()
     {
         InitMouseImagePanel();

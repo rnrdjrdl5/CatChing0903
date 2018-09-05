@@ -1927,7 +1927,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1086817049879410}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.413081, y: 0, z: 1.4195619}
+  m_LocalPosition: {x: -4.06, y: 14.470868, z: 0.411}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4332508046447416}
@@ -6898,12 +6898,13 @@ MonoBehaviour:
   CanUseObject: 0
   interactiveObjectType: 5
   ActionType: 1
-  InterObjectScore: 756
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 1958156237110774}
   InterPosType: 0
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
+  MinPlayerMount: 0
+  ObjectHeight: 30
   isCanFirstCheck: 0
   interMountType: 0
 --- !u!114 &114231633480256298

@@ -425,7 +425,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1925726866383996}
   m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -2.9299998, y: -2.418, z: 5.8}
+  m_LocalPosition: {x: 0.3600006, y: -2.418, z: 8.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4690851284387872}
@@ -1783,14 +1783,13 @@ MonoBehaviour:
   CanUseObject: 0
   interactiveObjectType: 1
   ActionType: 0
-  InterObjectScore: 22
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
-  MinPlayerMount: 3
-  ObjectHeight: 0
+  MinPlayerMount: 0
+  ObjectHeight: 10
   isCanFirstCheck: 0
   interMountType: 0
 --- !u!114 &114128869495594998
@@ -1892,7 +1891,6 @@ MonoBehaviour:
   CanUseObject: 0
   interactiveObjectType: 1
   ActionType: 0
-  InterObjectScore: 151
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
   InterPosType: 2
@@ -2046,14 +2044,13 @@ MonoBehaviour:
   CanUseObject: 0
   interactiveObjectType: 1
   ActionType: 0
-  InterObjectScore: 22
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
-  MinPlayerMount: 3
-  ObjectHeight: 0
+  MinPlayerMount: 0
+  ObjectHeight: 10
   isCanFirstCheck: 0
   interMountType: 0
 --- !u!114 &114716109966048496
@@ -2071,14 +2068,13 @@ MonoBehaviour:
   CanUseObject: 0
   interactiveObjectType: 1
   ActionType: 0
-  InterObjectScore: 22
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
-  MinPlayerMount: 3
-  ObjectHeight: 0
+  MinPlayerMount: 0
+  ObjectHeight: 10
   isCanFirstCheck: 0
   interMountType: 0
 --- !u!114 &114750429436038196
@@ -2185,13 +2181,12 @@ MonoBehaviour:
   CanUseObject: 0
   interactiveObjectType: 1
   ActionType: 0
-  InterObjectScore: 22
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
-  MinPlayerMount: 3
-  ObjectHeight: 0
+  MinPlayerMount: 0
+  ObjectHeight: 10
   isCanFirstCheck: 0
   interMountType: 0

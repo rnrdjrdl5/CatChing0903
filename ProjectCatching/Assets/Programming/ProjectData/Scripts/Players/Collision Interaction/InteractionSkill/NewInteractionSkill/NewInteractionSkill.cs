@@ -426,9 +426,6 @@ public class NewInteractionSkill : Photon.MonoBehaviour, IPunObservable {
         }
 
             
-        PhotonNetwork.player.SetCustomProperties(new ExitGames.Client.Photon.Hashtable { {"MouseScore"
-            ,(int)PhotonNetwork.player.CustomProperties["MouseScore"] + interactiveState.InterObjectScore } });
-
         
 
         

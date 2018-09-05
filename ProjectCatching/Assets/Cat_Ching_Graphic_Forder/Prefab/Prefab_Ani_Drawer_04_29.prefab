@@ -383,9 +383,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1001314777569958}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -16.999126, y: 0, z: -3.2226682}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -21.213, y: 13.803, z: -33.471}
+  m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
   m_Children:
   - {fileID: 4989030789964542}
   - {fileID: 4346663326899806}
@@ -393,7 +393,7 @@ Transform:
   - {fileID: 4554061579472194}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4273860810819858
 Transform:
   m_ObjectHideFlags: 1
@@ -1175,11 +1175,12 @@ MonoBehaviour:
   CanUseObject: 0
   interactiveObjectType: 3
   ActionType: 1
-  InterObjectScore: 373
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 1159525782602162}
   InterPosType: 0
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
+  MinPlayerMount: 0
+  ObjectHeight: 10
   isCanFirstCheck: 0
   interMountType: 0

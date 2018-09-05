@@ -304,12 +304,13 @@ MonoBehaviour:
   CanUseObject: 0
   interactiveObjectType: 2
   ActionType: 1
-  InterObjectScore: 113
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 1022417578925698}
   InterPosType: 0
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
+  MinPlayerMount: 0
+  ObjectHeight: 20
   isCanFirstCheck: 0
   interMountType: 0
 --- !u!114 &114539317432620304

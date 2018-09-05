@@ -50,9 +50,7 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
     [Tooltip(" - 어떤 액션인지 판단한다.")]
     public EnumAction ActionType;                             // 상호작용 액션 타입
 
-    [Header(" - 점수")]
-    [Tooltip(" - 점수 획득량")]
-    public int InterObjectScore;
+    
 
     [Header(" - 최대 사용가능 횟수 ")]
     public int MaxInterUseMount;
@@ -79,7 +77,7 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
     public int MinPlayerMount;
 
     [Header("- 가중치")]
-    public int ObjectHeight;
+    public int ObjectHeight = 0;
 
 
     public bool IsUseAction { get; set; }
@@ -110,6 +108,10 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
     public MeshRenderer[] InterMeshRenderer {get;set;}
 
     public PlayerPositionScript playerPositionScript { get; set; }
+
+    public float InterObjectMag { get; set; }       // 물체 배율
+    
+
     /**** 접근자 ****/
 
 
@@ -128,7 +130,6 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
     public List<Material> GetInterMaterials() { return InterMaterials; }
 
     public List<Texture> GetInterInterTexture() { return InterTexture; }
-
 
 
 
@@ -177,7 +178,7 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
 
     private void Start()
     {
-        objectManager.IncObjectCount(interactiveObjectType , ObjectHeight);
+        //objectManager.IncObjectCount(interactiveObjectType , ObjectHeight);
     }
 
 

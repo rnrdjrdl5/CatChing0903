@@ -229,7 +229,7 @@ public class PhotonManager : Photon.PunBehaviour , IPunObservable
 
     public void AddPlayerScore(string HashName, int PlusScore)
     {
-        int NowScore = (int)PhotonNetwork.player.CustomProperties[HashName];
+        float NowScore = (float)PhotonNetwork.player.CustomProperties[HashName];
 
         ExitGames.Client.Photon.Hashtable NextScore = new ExitGames.Client.Photon.Hashtable { { HashName, NowScore + PlusScore } };
         PhotonNetwork.player.SetCustomProperties(NextScore);
@@ -289,12 +289,12 @@ public class PhotonManager : Photon.PunBehaviour , IPunObservable
 
     public EnumGameFinish TimeOutGameResult()
     {
-        int CatGradeScore = 0;
+        float CatGradeScore = 0;
         for (int i = 0; i < PhotonNetwork.playerList.Length; i++)
         {
             if ((string)PhotonNetwork.playerList[i].CustomProperties["PlayerType"] == "Cat")
             {
-                CatGradeScore = (int)PhotonNetwork.playerList[i].CustomProperties["CatScore"];
+                CatGradeScore = (float)PhotonNetwork.playerList[i].CustomProperties["CatScore"];
                 break;
             }
         }
@@ -348,7 +348,7 @@ public class PhotonManager : Photon.PunBehaviour , IPunObservable
             return false;
         }
 
-        int CatGradeScore = (int)CatPhotonPlayer.CustomProperties["CatScore"];
+        float CatGradeScore = (float)CatPhotonPlayer.CustomProperties["CatScore"];
 
 
         float CatGradePersent;
@@ -357,7 +357,7 @@ public class PhotonManager : Photon.PunBehaviour , IPunObservable
             CatGradePersent = 0;
 
         else
-            CatGradePersent = (float)CatGradeScore / (float)PhotonManager.GetInstance().MaxCatScore * 100;
+            CatGradePersent = CatGradeScore / PhotonManager.GetInstance().MaxCatScore * 100;
 
 
         if(CatGradePersent <= GameBreakCondition)
@@ -992,15 +992,23 @@ public class PhotonManager : Photon.PunBehaviour , IPunObservable
 
         uIManager.selectCharPanelScript.isUseDelay = true;
 
-        // 삭제해야함.
 
+        // 인원수에 따른 물체 삭제
         if (objectManager != null)
         {
 
             objectManager.DeleteObjPropPlayer();
             Debug.Log("수행완료");
+
+            objectManager.RegisterObjectMount();
+            Debug.Log("수행완료2");
+
+            objectManager.CalcObjectMag();
+            Debug.Log("수행완료3");
         }
 
+        
+        
     }
 
 
