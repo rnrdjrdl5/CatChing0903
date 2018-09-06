@@ -63,7 +63,7 @@ public class PhotonManager : Photon.PunBehaviour , IPunObservable
 
     public float StartImage_WaitTime = 1.5f;
 
-    public List<GameObject> AllPlayers;            // 플레이어들(오브젝트)을 가리키는 변수 , 플레이어에게 무슨 효과를 주려고 할 때.
+    public List<GameObject> AllPlayers { get; set; }            // 플레이어들(오브젝트)을 가리키는 변수 , 플레이어에게 무슨 효과를 주려고 할 때.
     public List<PhotonPlayer> MousePlayerListOneSort { get; set; }         // 쥐를 담는 리스트, 1회 정렬 이외에 하지 않음.
 
     public PhotonPlayer CatPhotonPlayer;
@@ -72,10 +72,16 @@ public class PhotonManager : Photon.PunBehaviour , IPunObservable
     public GameObject[] MouseLocation;
     public GameObject CatLocation;
 
-    public float GameTimeOutCondition;      // 타임아웃 시 판단게이지
+    
+    
     public float GameBreakCondition;        // 전부 브레이크판단
 
     public float MenuUIFadeInFadeOut = 1.0f;
+
+    [Tooltip(" 0-> 1 , 1->2 ... 4->5 로 사용")]
+    public float[] mouseWinScoreCondition;  // 타임아웃 판단 인원수별로 조절
+
+    public float GameTimeOutCondition { get; set; }      // 타임아웃 시 판단게이지
 
     /**** Private ****/
     private UIManager uIManager;                // UI 매니저
@@ -93,7 +99,9 @@ public class PhotonManager : Photon.PunBehaviour , IPunObservable
 
 
     private bool isUse30Second = false;
+
     
+
 
     /**** 접근자 ****/
 
@@ -1006,6 +1014,10 @@ public class PhotonManager : Photon.PunBehaviour , IPunObservable
             objectManager.CalcObjectMag();
             Debug.Log("수행완료3");
         }
+
+        // 인원수에 따른 변동 조절
+        GameTimeOutCondition = mouseWinScoreCondition[MousePlayerListOneSort.Count];
+        
 
         
         
