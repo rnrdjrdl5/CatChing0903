@@ -126,7 +126,7 @@ public partial class PlayerMove
                     }
 
                     else
-                        MoveDir *= PlayerRopeSpeed;
+                        MoveDir *= PlayerRopeSpeed * PlayerRopeCurve;
 
                     MoveDir.y = tempDirY;
                 }

@@ -23,9 +23,11 @@ public partial class PlayerMove
 
     [Header("뒤 이동속도")]
     public float PlayerBackSpeed = 5.0f;                // 카메라 뒤로 이동
+    
 
     [Header("밧줄 이동속도")]
     public float PlayerRopeSpeed = 2.5f;                // 카메라 뒤로 이동
+    public float PlayerRopeCurve = 0.0f;
 
     [Header("카메라 회전속도")]
     public float RotationSpeed = 100.0f;             // 캐릭터 회전속도
