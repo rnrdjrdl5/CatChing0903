@@ -1021,6 +1021,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4184551872042428}
+  - component: {fileID: 135044090755833660}
   m_Layer: 0
   m_Name: UpHeadPosition
   m_TagString: Untagged
@@ -1328,7 +1329,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1902274947724962}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4816161893638192}
@@ -2583,6 +2584,7 @@ MonoBehaviour:
   PlayerSpeed: 3
   PlayerBackSpeed: 2
   PlayerRopeSpeed: 2.5
+  PlayerRopeCurve: 0
   RotationSpeed: 100
   JumpSpeed: 10
   gravity: 40
@@ -3110,7 +3112,7 @@ MonoBehaviour:
   RescueDistance: 10
   MaxRescueTime: 3
   RescueHP: 10
-  MinPlayerDis: 0.7
+  MinPlayerDis: 1.5
   defaultInput:
     SkillKeyType: 1
 --- !u!114 &114807717715474246
@@ -3131,6 +3133,18 @@ MonoBehaviour:
   RopeDeadAnimation: 2
   MaxRopeDeadTime: 50
   PlayerFinalDeadtime: 3
+--- !u!135 &135044090755833660
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1902274947724962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!135 &135561162490336044
 SphereCollider:
   m_ObjectHideFlags: 1

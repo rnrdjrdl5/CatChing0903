@@ -430,6 +430,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1386515878590914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4697251175174906}
+  - component: {fileID: 135262272539220116}
+  - component: {fileID: 114600912146418838}
+  m_Layer: 18
+  m_Name: RescueCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1398571031864640
 GameObject:
   m_ObjectHideFlags: 1
@@ -1261,6 +1278,7 @@ Transform:
   - {fileID: 4029288610260344}
   - {fileID: 4174420055953920}
   - {fileID: 4800737618623362}
+  - {fileID: 4697251175174906}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1971,6 +1989,19 @@ Transform:
   m_Father: {fileID: 4229056012801056}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4697251175174906
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386515878590914}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4032005386701492}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4700472189870718
 Transform:
   m_ObjectHideFlags: 1
@@ -2630,7 +2661,7 @@ MonoBehaviour:
   RescueDistance: 10
   MaxRescueTime: 3
   RescueHP: 10
-  MinPlayerDis: 0.7
+  MinPlayerDis: 1.5
   defaultInput:
     SkillKeyType: 1
 --- !u!114 &114108890233113468
@@ -2846,6 +2877,17 @@ MonoBehaviour:
   DecreaseCoolTimeTick: 0
   EmoticonFadeInOut: 0.5
   EmotionWait: 1.5
+--- !u!114 &114600912146418838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386515878590914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d5a43735686b2044b2498509485e54a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114648570055716640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2968,6 +3010,7 @@ MonoBehaviour:
   PlayerSpeed: 3
   PlayerBackSpeed: 2
   PlayerRopeSpeed: 2.5
+  PlayerRopeCurve: 0
   RotationSpeed: 100
   JumpSpeed: 10
   gravity: 40
@@ -3131,6 +3174,18 @@ MonoBehaviour:
   DecreaseCoolTimeTick: 0
   EmoticonFadeInOut: 0.5
   EmotionWait: 1.5
+--- !u!135 &135262272539220116
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386515878590914}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!135 &135914940727403296
 SphereCollider:
   m_ObjectHideFlags: 1

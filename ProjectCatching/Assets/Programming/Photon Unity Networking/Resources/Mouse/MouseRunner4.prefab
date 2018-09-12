@@ -800,6 +800,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1644087735941990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4678111641356272}
+  - component: {fileID: 135919925153483166}
+  - component: {fileID: 114779856141102780}
+  m_Layer: 18
+  m_Name: RescueCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1644332358401990
 GameObject:
   m_ObjectHideFlags: 1
@@ -1701,6 +1718,7 @@ Transform:
   - {fileID: 4014186103846756}
   - {fileID: 4345164158116304}
   - {fileID: 4866980261719202}
+  - {fileID: 4678111641356272}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2010,6 +2028,19 @@ Transform:
   - {fileID: 4012310138955334}
   m_Father: {fileID: 4186267495142866}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4678111641356272
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644087735941990}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4485251386704550}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4689166817538590
 Transform:
@@ -2671,6 +2702,7 @@ MonoBehaviour:
   PlayerSpeed: 3
   PlayerBackSpeed: 2
   PlayerRopeSpeed: 2.5
+  PlayerRopeCurve: 0
   RotationSpeed: 100
   JumpSpeed: 10
   gravity: 40
@@ -2812,7 +2844,7 @@ MonoBehaviour:
   RescueDistance: 10
   MaxRescueTime: 3
   RescueHP: 10
-  MinPlayerDis: 0.7
+  MinPlayerDis: 1.5
   defaultInput:
     SkillKeyType: 1
 --- !u!114 &114517694134293808
@@ -2942,6 +2974,17 @@ MonoBehaviour:
   RopeDeadAnimation: 2
   MaxRopeDeadTime: 50
   PlayerFinalDeadtime: 3
+--- !u!114 &114779856141102780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644087735941990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d5a43735686b2044b2498509485e54a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114805132928229074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3143,6 +3186,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 8
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135919925153483166
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644087735941990}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!137 &137169420805870088
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

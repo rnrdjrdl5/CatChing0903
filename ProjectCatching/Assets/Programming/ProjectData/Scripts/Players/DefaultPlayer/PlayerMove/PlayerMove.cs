@@ -28,10 +28,6 @@ public partial class PlayerMove : Photon.PunBehaviour
 
             Vector3 playerForward = gameObject.transform.forward;
             playerForward.y = springArmObject.armCamera.transform.forward.y;
-
-            Debug.DrawRay(gameObject.transform.position + Vector3.up * 0.5f, 
-                playerForward * 10.0f,
-                Color.blue, Time.deltaTime);
         }
 
 

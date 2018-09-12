@@ -5,12 +5,7 @@ using UnityEngine;
 /******************************************
 *
 * 코더 : 반재억
-* 일자 : 2018-02-21
-* 코딩목적 : 마우스로 특정 지점을 편하게 지정할 수 있도록 사용.
-* 특이사항 
-*  - 해당 기능은 Blink 내부의 함수와 같습니다.
-*    Blink 내부의 함수를 이 스크립트의 함수를 사용하도록 교체합시다. 
-*    
+* 일자 : 2018-02-21    
 **********************************************/
 public class PointToLocation{
 
@@ -39,6 +34,7 @@ public class PointToLocation{
 
         {
             return hit.collider.gameObject;
+            
 
         }
         else

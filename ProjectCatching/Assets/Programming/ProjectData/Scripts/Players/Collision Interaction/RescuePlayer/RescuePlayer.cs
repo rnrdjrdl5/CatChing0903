@@ -8,7 +8,7 @@ public class RescuePlayer : Photon.MonoBehaviour, IPunObservable
     public float MaxRescueTime = 3.0f;
     public float RescueHP = 10.0f;
 
-    public float MinPlayerDis = 0.7f;         //플레이어 사이 거리
+    public float MinPlayerDis = 1.5f;         //플레이어 사이 거리
 
     public DefaultInput defaultInput;
 
@@ -84,36 +84,65 @@ public class RescuePlayer : Photon.MonoBehaviour, IPunObservable
             return;
 
 
-
+        
         if (!CheckState())
             return;
 
 
         SpringArmObject springArmObject = SpringArmObject.GetInstance();
 
-        tempTargetObject = pointToLocation.FindObject(RescueDistance, "OtherPlayer", SpringArmObject.GetInstance().armCamera);
+        //tempTargetObject = pointToLocation.FindObject(RescueDistance, "OtherPlayer", SpringArmObject.GetInstance().armCamera);
+
+        tempTargetObject = pointToLocation.FindObject
+            (RescueDistance, "RescueLayer", SpringArmObject.GetInstance().armCamera);
+
+        if(tempTargetObject != null)
+            tempTargetObject = tempTargetObject.transform.root.gameObject;
+
+        //  Debug.Log(tempTargetObject);
+
+
+
+        Color color = Color.red;
+        if (tempTargetObject != null)
+            color = Color.green;
+
+        Debug.DrawLine(springArmObject.transform.position,
+            springArmObject.transform.position + pointToLocation.FindMouseCursorPosition(springArmObject.armCamera) * RescueDistance
+            , color, Time.deltaTime);
+
+
+
+        Debug.Log("타겟 :" + tempTargetObject);
 
         if (tempTargetObject == null)
         {
             UIManager.GetInstance().pressImagePanelScript.RescueImage.SetActive(false);
             return;
         }
+        Debug.Log("타겟2 :" + tempTargetObject);
 
         float PlayerDistance = (tempTargetObject.transform.position - gameObject.transform.position).magnitude;
 
         if (!CheckMinDistance(PlayerDistance))
             UIManager.GetInstance().pressImagePanelScript.RescueImage.SetActive(false);
 
-
+        
 
         if (!CheckCanUseResque(PlayerDistance))
             return;
 
+        Debug.Log("타겟3 :" + tempTargetObject);
+
         if (!CheckOtherPlayerState())
             return;
 
+        Debug.Log("타겟4 :" + tempTargetObject);
+
         if (tempTargetObject != null)
             UIManager.GetInstance().pressImagePanelScript.RescueImage.SetActive(true);
+
+        Debug.Log("타겟5 :" + tempTargetObject);
 
         if (!defaultInput.IsUseKey())
             return;
@@ -124,7 +153,7 @@ public class RescuePlayer : Photon.MonoBehaviour, IPunObservable
 
         targetObject.GetComponent<RescuePlayer>().CallCheckUseRescue(PhotonNetwork.player.ID);
 
-
+        Debug.Log("타겟6 :" + tempTargetObject);
 
     }
 

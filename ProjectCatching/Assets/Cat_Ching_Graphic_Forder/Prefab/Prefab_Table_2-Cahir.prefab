@@ -293,7 +293,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1366160352340200}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10.56, y: 1.066, z: 5.9877334}
+  m_LocalPosition: {x: 26.83, y: 0.017605748, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4910933393900522}
@@ -951,12 +951,13 @@ MonoBehaviour:
   CanUseObject: 0
   interactiveObjectType: 1
   ActionType: 0
-  InterObjectScore: 22
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
+  MinPlayerMount: 0
+  ObjectHeight: 0
   isCanFirstCheck: 0
   interMountType: 0
 --- !u!114 &114060288913275462
@@ -974,12 +975,13 @@ MonoBehaviour:
   CanUseObject: 0
   interactiveObjectType: 1
   ActionType: 0
-  InterObjectScore: 151
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
+  MinPlayerMount: 0
+  ObjectHeight: 8
   isCanFirstCheck: 0
   interMountType: 0
 --- !u!114 &114131265396460224
@@ -1139,12 +1141,13 @@ MonoBehaviour:
   CanUseObject: 0
   interactiveObjectType: 1
   ActionType: 0
-  InterObjectScore: 22
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
+  MinPlayerMount: 0
+  ObjectHeight: 0
   isCanFirstCheck: 0
   interMountType: 0
 --- !u!114 &114719061631006822

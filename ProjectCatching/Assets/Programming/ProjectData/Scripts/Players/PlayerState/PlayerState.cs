@@ -39,6 +39,7 @@ public partial class PlayerState : MonoBehaviour {
         Transform[] tr = GetComponentsInChildren<Transform>();
         for (int i = 0; i < tr.Length; i++)
         {
+            if(tr[i].gameObject.name != "RescueCollider")
             tr[i].gameObject.layer = LayerMask.NameToLayer("OtherPlayer");
         }
 

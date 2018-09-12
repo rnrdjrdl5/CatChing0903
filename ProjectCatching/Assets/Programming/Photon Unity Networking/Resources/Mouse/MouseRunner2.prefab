@@ -675,6 +675,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1523188561719150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4340718648661552}
+  - component: {fileID: 135570544044759306}
+  - component: {fileID: 114588761159274496}
+  m_Layer: 18
+  m_Name: RescueCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1532273549628032
 GameObject:
   m_ObjectHideFlags: 1
@@ -1390,6 +1407,7 @@ Transform:
   - {fileID: 4623741873827270}
   - {fileID: 4744316286401188}
   - {fileID: 4789517346247448}
+  - {fileID: 4340718648661552}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1447,6 +1465,19 @@ Transform:
   - {fileID: 4949370939767132}
   m_Father: {fileID: 4063792926258514}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4340718648661552
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523188561719150}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4240442137089850}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4358991370028666
 Transform:
@@ -2596,6 +2627,7 @@ MonoBehaviour:
   PlayerSpeed: 3
   PlayerBackSpeed: 2
   PlayerRopeSpeed: 2.5
+  PlayerRopeCurve: 0
   RotationSpeed: 100
   JumpSpeed: 10
   gravity: 40
@@ -3002,6 +3034,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f0d71735119cdc74a96edec796264320, type: 3}
   - {fileID: 8300000, guid: 812db8e9880f821458f7abdc941485c6, type: 3}
   BGAudios: []
+--- !u!114 &114588761159274496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523188561719150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d5a43735686b2044b2498509485e54a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114684045579106060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3066,7 +3109,7 @@ MonoBehaviour:
   RescueDistance: 10
   MaxRescueTime: 3
   RescueHP: 10
-  MinPlayerDis: 0.7
+  MinPlayerDis: 1.5
   defaultInput:
     SkillKeyType: 1
 --- !u!114 &114892262171229068
@@ -3131,6 +3174,18 @@ MonoBehaviour:
   IncreaseCoolTimeTick: 2
   DecreaseCoolTimeTick: 1
   PlayerRunSpeed: 5.2
+--- !u!135 &135570544044759306
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523188561719150}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!135 &135639079884176030
 SphereCollider:
   m_ObjectHideFlags: 1
