@@ -25,6 +25,7 @@ public class RandomObjectSpawn : MonoBehaviour {
         for (int i = 0; i < RandomObjectPosition.Count; i++)
         {
 
+            Debug.Log("생성시도");
             GameObject go = PoolingManager.GetInstance().PopObject(ObjectName);
 
             go.transform.position = RandomObjectPosition[i].transform.position;

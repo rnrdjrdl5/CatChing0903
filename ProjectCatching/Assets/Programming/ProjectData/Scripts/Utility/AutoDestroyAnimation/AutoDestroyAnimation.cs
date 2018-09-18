@@ -5,10 +5,11 @@ using UnityEngine;
 public class AutoDestroyAnimation : MonoBehaviour {
     Animator animator;
 
-
     private void Awake()
     {
+
         animator = GetComponent<Animator>();
+       
     }
     // Use this for initialization
     void Start () {
@@ -31,10 +32,11 @@ public class AutoDestroyAnimation : MonoBehaviour {
                     {
                         cameraShake.ResetCameraShake();
                         cameraShake.enabled = false;
+
                     }
 
                     animator.SetBool("UseAction", false);
-                    PoolingManager.GetInstance().PushObject(this.gameObject);
+                    PoolingManager.GetInstance().PushObject(gameObject);
                 }
             }
         }

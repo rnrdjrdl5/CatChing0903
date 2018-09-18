@@ -228,7 +228,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1413104922776374}
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0.68, y: 0, z: 0}
+  m_LocalPosition: {x: 0.68, y: 0, z: -0.008000017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4809445212263860}
@@ -267,7 +267,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1551363664316058}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0.68, y: 0, z: 0}
+  m_LocalPosition: {x: -0.688, y: -0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4809445212263860}
@@ -949,7 +949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractiveTime: 0.5
   CanUseObject: 0
-  interactiveObjectType: 1
+  interactiveObjectType: 12
   ActionType: 0
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
@@ -957,9 +957,10 @@ MonoBehaviour:
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
   MinPlayerMount: 0
-  ObjectHeight: 0
+  ObjectHeight: 10
   isCanFirstCheck: 0
   interMountType: 0
+  physicsEffect: 29
 --- !u!114 &114060288913275462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -984,6 +985,7 @@ MonoBehaviour:
   ObjectHeight: 8
   isCanFirstCheck: 0
   interMountType: 0
+  physicsEffect: 29
 --- !u!114 &114131265396460224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1017,7 +1019,7 @@ MonoBehaviour:
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 114507831208348450, guid: 0c9048a1dab71374e92fea3a6fec51b6, type: 2}
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
@@ -1139,7 +1141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractiveTime: 0.5
   CanUseObject: 0
-  interactiveObjectType: 1
+  interactiveObjectType: 12
   ActionType: 0
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
@@ -1147,9 +1149,10 @@ MonoBehaviour:
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
   MinPlayerMount: 0
-  ObjectHeight: 0
+  ObjectHeight: 10
   isCanFirstCheck: 0
   interMountType: 0
+  physicsEffect: 29
 --- !u!114 &114719061631006822
 MonoBehaviour:
   m_ObjectHideFlags: 1

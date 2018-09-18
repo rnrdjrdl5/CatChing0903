@@ -7,7 +7,7 @@ using UnityEngine;
 // 점수를 확인하기 위해서도 사용
 public class ObjectManager : MonoBehaviour {
 
-    private const int MAX_OBJECT_TYPE = 11 + 1;  // 1 이유 : 시작점이 1이라서 한칸 더 할당함
+    private const int MAX_OBJECT_TYPE = 12 + 1;  // 1 이유 : 시작점이 1이라서 한칸 더 할당함
 
     private static ObjectManager objectManager;
     public static ObjectManager GetInstance() { return objectManager; }

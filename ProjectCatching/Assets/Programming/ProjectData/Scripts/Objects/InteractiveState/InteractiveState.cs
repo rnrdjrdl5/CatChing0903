@@ -12,7 +12,7 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
     public enum EnumInteractiveObject
     { TABLE = 1, MIKE, DRAWE, POT, PIANO, POSMEKA, SAUCES, FRYHANGER, CART, REFRIGERATOR,
 
-        FRAME
+        FRAME , CHAIR
     };
     
 
@@ -110,6 +110,8 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
     public PlayerPositionScript playerPositionScript { get; set; }
 
     public float InterObjectMag { get; set; }       // 물체 배율
+
+    public PoolingManager.EffctType physicsEffect;
     
 
     /**** 접근자 ****/
@@ -427,7 +429,8 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
         // 플레이어와의 충돌은 없애고, 상호작용탐지도 없앤다.
         gameObject.layer = LayerMask.NameToLayer("NoPlayerIntering");
 
-        if (interactiveObjectType == EnumInteractiveObject.TABLE)
+        if (interactiveObjectType == EnumInteractiveObject.TABLE ||
+            interactiveObjectType == EnumInteractiveObject.CHAIR)
         {
             // 물리 컴포넌트 받기
             TablePhysics tablePhysics = GetComponent<TablePhysics>();

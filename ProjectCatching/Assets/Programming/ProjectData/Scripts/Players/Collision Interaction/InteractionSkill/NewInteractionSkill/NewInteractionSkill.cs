@@ -25,7 +25,6 @@ public class NewInteractionSkill : Photon.MonoBehaviour, IPunObservable {
     private Animator animator;                           // 애니메이터 컴포넌트
 
     private FindObject findObject;                         // 탐지 정보
-    //private TimeBar timeBar;                            // 타임 바 정보
     public SpringArmObject springArmObject;                       // 카메라 정보
     private PlayerState playerState;                        // 플레이어 상태 정보
     private InteractiveState interactiveState;                   // 상호작용 물체 정보
@@ -208,14 +207,6 @@ public class NewInteractionSkill : Photon.MonoBehaviour, IPunObservable {
     public void UseSkill()
     {
 
-        // 물리, 애니메이션 모두다 플레이어의 뒤 방향으로 설정
-        // cameraRadX : Free카메라용 오프셋
-        // cameraRadX는 Free 상태에서만 갱신되기 때문에 이렇게 첫 값을 지정해 주어야 함.
-
-
-        // 플레이어 카메라 이전 좌표 저장 , 
-        // 애니메이션 액션 보간에서 사용
-
 
         float RotationY = springArmObject.springArmType.GetSpringArmRotationY();
 
@@ -241,7 +232,7 @@ public class NewInteractionSkill : Photon.MonoBehaviour, IPunObservable {
                 gameObject.transform.position =
                 interactiveState.PlayerInterPosition.transform.position;
 
-
+                
 
 
                 // 2. 플레이어 각도 고정
@@ -258,10 +249,13 @@ public class NewInteractionSkill : Photon.MonoBehaviour, IPunObservable {
             else
             {
 
-                // 1. 플레이어 위치 고정
+
+              /*  // 1. 플레이어 위치 고정
                 gameObject.transform.position =
                 interactiveState.PlayerInterPosition.transform.position;
 
+
+            
 
 
 
@@ -275,7 +269,7 @@ public class NewInteractionSkill : Photon.MonoBehaviour, IPunObservable {
 
                 gameObject.transform.rotation = Quaternion.Euler(v3);
 
-
+                */
 
 
 
@@ -364,6 +358,37 @@ public class NewInteractionSkill : Photon.MonoBehaviour, IPunObservable {
 
     // 액션 사용, 물리나 애니를 호출함
     // interactive 정보가 필요함.
+
+    private Vector3 AddPhysics(PoolingManager.EffctType physicsEffect)
+    {
+        Vector3 PhysicsPower = Vector3.zero;
+
+        PhysicsPower = transform.position - OriginalCameraPosition;
+
+        GameObject go = PoolingManager.GetInstance().CreateEffectCameraShake(physicsEffect, photonView.isMine);
+
+
+        Vector3 DirVector =
+            (gameObject.transform.position -
+            interactiveState.gameObject.transform.position).normalized;
+
+        DirVector.y = 0;
+
+
+        go.transform.position = interactiveState.transform.position +
+            Vector3.up +
+            DirVector * 0.5f;
+
+
+        go.transform.rotation = Quaternion.identity;
+
+        go.transform.Rotate(Vector3.right, -90.0f);
+
+        return PhysicsPower;
+
+    }
+
+
     private void CallAction()
     {
         IsUseAction = true;
@@ -372,31 +397,15 @@ public class NewInteractionSkill : Photon.MonoBehaviour, IPunObservable {
 
         if (interactiveState.ActionType == InteractiveState.EnumAction.PHYSICS)
         {
-            Vector3 PhysicsPower = Vector3.zero;
+            Vector3 PhysicsPower = transform.forward;                // 물체가 날라갈 XZ방향
             switch (interactiveState.interactiveObjectType)
             {
                 case InteractiveState.EnumInteractiveObject.TABLE:
-                    PhysicsPower = transform.position - OriginalCameraPosition;
+                    PhysicsPower = AddPhysics(interactiveState.physicsEffect);
+                    break;
 
-                    GameObject go = PoolingManager.GetInstance().CreateEffectCameraShake(PoolingManager.EffctType.TABLE_EFFECT , photonView.isMine);
-
-
-                    Vector3 DirVector =
-                        (gameObject.transform.position -
-                        interactiveState.gameObject.transform.position).normalized;
-
-                    DirVector.y = 0;
-
-
-                    go.transform.position = interactiveState.transform.position +
-                        Vector3.up +
-                        DirVector * 0.5f;
-                        
-
-                    go.transform.rotation = Quaternion.identity;
-
-                    go.transform.Rotate(Vector3.right, -90.0f);
-
+                case InteractiveState.EnumInteractiveObject.CHAIR:
+                    PhysicsPower = AddPhysics(interactiveState.physicsEffect);
                     break;
 
                 case InteractiveState.EnumInteractiveObject.CART:

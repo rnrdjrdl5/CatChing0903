@@ -450,7 +450,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1667847903549704}
   m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -27.048344, y: -5.5917325, z: 1.6567001}
+  m_LocalPosition: {x: -6.6200004, y: 1.068, z: -4.466266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4201055533854890}
@@ -1986,16 +1986,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractiveTime: 0.5
   CanUseObject: 0
-  interactiveObjectType: 1
+  interactiveObjectType: 12
   ActionType: 0
-  InterObjectScore: 22
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
+  MinPlayerMount: 0
+  ObjectHeight: 0
   isCanFirstCheck: 0
   interMountType: 0
+  physicsEffect: 29
 --- !u!114 &114281222062742910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2022,16 +2024,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractiveTime: 0.5
   CanUseObject: 0
-  interactiveObjectType: 1
+  interactiveObjectType: 12
   ActionType: 0
-  InterObjectScore: 22
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
+  MinPlayerMount: 0
+  ObjectHeight: 0
   isCanFirstCheck: 0
   interMountType: 0
+  physicsEffect: 29
 --- !u!114 &114390926497547020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2086,14 +2090,16 @@ MonoBehaviour:
   CanUseObject: 0
   interactiveObjectType: 1
   ActionType: 0
-  InterObjectScore: 151
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
+  MinPlayerMount: 0
+  ObjectHeight: 0
   isCanFirstCheck: 0
   interMountType: 0
+  physicsEffect: 13
 --- !u!114 &114475774806444930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2172,16 +2178,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractiveTime: 0.5
   CanUseObject: 0
-  interactiveObjectType: 1
+  interactiveObjectType: 12
   ActionType: 0
-  InterObjectScore: 22
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
+  MinPlayerMount: 0
+  ObjectHeight: 0
   isCanFirstCheck: 0
   interMountType: 0
+  physicsEffect: 29
 --- !u!114 &114544058816915054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2317,16 +2325,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractiveTime: 0.5
   CanUseObject: 0
-  interactiveObjectType: 1
+  interactiveObjectType: 12
   ActionType: 0
-  InterObjectScore: 22
   MaxInterUseMount: 0
   PlayerInterPosition: {fileID: 0}
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
+  MinPlayerMount: 0
+  ObjectHeight: 0
   isCanFirstCheck: 0
   interMountType: 0
+  physicsEffect: 29
 --- !u!114 &114866021431768362
 MonoBehaviour:
   m_ObjectHideFlags: 1

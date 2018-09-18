@@ -63,7 +63,7 @@ public class TablePhysics : MonoBehaviour {
         rigidBody.AddForce( NotY_NormalVector3 * XZPower, ForceMode.Impulse);
 
         //// Y축 힘
-        rigidBody.AddForce(transform.up * YPower, ForceMode.Impulse);
+        rigidBody.AddForce(Vector3.up * YPower, ForceMode.Impulse);
 
         // 이동방향으로 회전방향 구하기
         Quaternion QuatY = Quaternion.Euler(0.0f, 90.0f, 0.0f);

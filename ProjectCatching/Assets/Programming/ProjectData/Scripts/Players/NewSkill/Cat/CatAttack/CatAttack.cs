@@ -51,7 +51,6 @@ public class CatAttack : DefaultNewSkill {
 
         else
         {
-            Debug.Log("조건만족못함");
             return false;
         }
 
@@ -151,7 +150,12 @@ public class CatAttack : DefaultNewSkill {
 
         // 이펙트 위치 지정
         effectObject.transform.position = transform.position;
-        effectObject.transform.rotation = transform.rotation;
+
+
+
+        effectObject.transform.rotation = Quaternion.Euler(effectObject.transform.rotation.eulerAngles +
+            effectObject.transform.rotation.eulerAngles);
+
         effectObject.transform.SetParent(transform);
 
         // 이펙트 진행

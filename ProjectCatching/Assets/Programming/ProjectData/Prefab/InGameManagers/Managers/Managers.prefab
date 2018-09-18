@@ -1099,9 +1099,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e456c2ac9ba34e443a7989ccb0aea49e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingSceneName: loadingSceneName
   DramaticCameraPrefab: {fileID: 1490471417733590, guid: 01ca78dbd82e6d146977ffb1efa5eae0,
     type: 2}
-  playTimerNumber: 60
   MaxCatScore: 9300
   FinishGame_Between_WinLoseUI: 2
   WinLoseUI_Between_FinishFadeOut: 2
@@ -1114,7 +1114,8 @@ MonoBehaviour:
   - {fileID: 1695287139241842}
   - {fileID: 1320606239570160}
   CatLocation: {fileID: 1416915735904818}
-  GameBreakCondition: 0
+  playTimes: 46000000500000005a000000640000006e000000
+  GameBreakCondition: 10
   MenuUIFadeInFadeOut: 1
   mouseWinScoreCondition:
   - 90
@@ -1162,9 +1163,9 @@ MonoBehaviour:
   Prefabs:
   - {fileID: 1130387818386380, guid: c154c98e81bc205498355c74f5312793, type: 2}
   - {fileID: 1483810901689950, guid: 8573b8bbdb7318e4abfd00acab837a54, type: 2}
-  - {fileID: 1991179197908126, guid: 0cb374aab6fabb845b69a3ad2a8510ad, type: 2}
-  - {fileID: 1430517499460748, guid: 974006756d3f87e4d9196dcd23846683, type: 2}
-  - {fileID: 1983859771268454, guid: 747a5dea82d2ea24bb413e859c13cbff, type: 2}
+  - {fileID: 1773471974185550, guid: 7da52228c24045b4487dc1d51ddec177, type: 2}
+  - {fileID: 1388036003476922, guid: 6df67742891331e4881b87ef1df52dca, type: 2}
+  - {fileID: 1212388872801384, guid: 06c328f9acc426c48aef3e4d3c5507e5, type: 2}
   - {fileID: 1465043531500612, guid: ffe759f676cf77c4cba956451a12c5fa, type: 2}
   - {fileID: 1676250423952688, guid: 22e4b901b3cf09e4e960f93f0fb447fa, type: 2}
   - {fileID: 1982147693271044, guid: c91c82331947fdc4d9ebd0bc2ee26cb1, type: 2}
@@ -1200,6 +1201,7 @@ MonoBehaviour:
   - {fileID: 1590269190047922, guid: fdbeeb45e6bb3da408fab61ea986cf51, type: 2}
   - {fileID: 1459595642143272, guid: 0d431f2b8420c964ab66842c68698535, type: 2}
   - {fileID: 1026870799782340, guid: 71a3a81d6fe0c6641861b780d2d34ac2, type: 2}
+  - {fileID: 1146384554403142, guid: 98e3b148c5d92bb4d8203e59234010fe, type: 2}
   PositionArea: {fileID: 1863978155275476}
 --- !u!114 &114705323081491284
 MonoBehaviour:

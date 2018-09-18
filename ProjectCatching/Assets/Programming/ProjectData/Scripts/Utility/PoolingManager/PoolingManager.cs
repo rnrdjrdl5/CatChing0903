@@ -26,7 +26,7 @@ public class PoolingManager : MonoBehaviour {
 
         DRAWER_EFFECT, HELP_BUBBLE, REVIVE_EFFECT,FRYINGPAN_HIT_EFFECT,DRAWER_TRAIL_EFFECT,
 
-        ATTACK_FINISH,
+        ATTACK_FINISH, CHAIR_EFFECT,
 
         NONE
 
@@ -43,6 +43,10 @@ public class PoolingManager : MonoBehaviour {
             case EffctType.POT_EFFECT:
                 effect = PopObject("FX_KDH_HitPlate_wave");
                 break;
+            case EffctType.CHAIR_EFFECT:
+                effect = PopObject("FX_KDH_Prefab_chair");
+                break;
+
         }
 
         if(isMine)
@@ -61,10 +65,10 @@ public class PoolingManager : MonoBehaviour {
                 break;
 
             case EffctType.ATTACKLINE1:
-                effect = PopObject("YSK_Cat_Hit_Line_Attack_01");
+                effect = PopObject("YSK_Cat_Hit_Line_Attack_01_RE");
                 break;
             case EffctType.ATTACKLINE2:
-                effect = PopObject("YSK_Cat_Hit_Line_Attack_02");
+                effect = PopObject("YSK_Cat_Hit_Line_Attack_02_RE");
                 break;
 
             case EffctType.BIGDUST_BIG:
@@ -139,6 +143,7 @@ public class PoolingManager : MonoBehaviour {
             case EffctType.ATTACK_FINISH:
                 effect = PopObject("YSK_FX_Hit_Cat_Finsh");
                 break;
+
             case EffctType.NONE:
                 effect = null;
                 break;

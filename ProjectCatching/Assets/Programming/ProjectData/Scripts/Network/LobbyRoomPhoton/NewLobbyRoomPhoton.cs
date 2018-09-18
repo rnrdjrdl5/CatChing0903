@@ -83,8 +83,8 @@ public class NewLobbyRoomPhoton : Photon.PunBehaviour
 
         // soundManager.PlayBGSound(SoundManager.EnumBGSound.BG_LOBBY_SOUND);
 
-        StartCoroutine("FadeInGame");
 
+        StartCoroutine("FadeInGame");
     }
 
     // Update is called once per frame
@@ -93,7 +93,6 @@ public class NewLobbyRoomPhoton : Photon.PunBehaviour
         if (gameStateType == EnumGameState.ROOM)
         {
 
-            Debug.Log("adsf");
             roomPlayerDatas.Clear();
             InitPlayerList();
             DrawRoomState();

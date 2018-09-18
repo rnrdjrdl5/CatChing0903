@@ -192,7 +192,6 @@ public partial class PlayerMove
             if (MoveDir.y < 0 &&
                 animator.GetInteger("JumpType") == 1)
             {
-                Debug.Log("점프 최대 도달 후 MoveDir.y : " + MoveDir.y);
                 animator.SetInteger("JumpType", 2);
 
                 PreFallPosition = transform.position.y;
