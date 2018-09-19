@@ -425,7 +425,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1925726866383996}
   m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 0.3600006, y: -2.418, z: 3.45}
+  m_LocalPosition: {x: -2.9299998, y: -2.418, z: 5.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4690851284387872}
@@ -1215,7 +1215,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907567690246882}
-  m_Mesh: {fileID: 4300000, guid: 8d7c51100b1d883438cc48ec75240d55, type: 3}
+  m_Mesh: {fileID: 4300000, guid: bedbc725043dced42a50009d4e1d47ea, type: 3}
 --- !u!33 &33097910139248130
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1250,7 +1250,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1978499692016372}
-  m_Mesh: {fileID: 4300000, guid: 8d7c51100b1d883438cc48ec75240d55, type: 3}
+  m_Mesh: {fileID: 4300000, guid: bedbc725043dced42a50009d4e1d47ea, type: 3}
 --- !u!33 &33477386512357756
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1299,7 +1299,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1505908918182170}
-  m_Mesh: {fileID: 4300000, guid: 8d7c51100b1d883438cc48ec75240d55, type: 3}
+  m_Mesh: {fileID: 4300000, guid: bedbc725043dced42a50009d4e1d47ea, type: 3}
 --- !u!33 &33837518620031630
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1313,7 +1313,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1117820716261544}
-  m_Mesh: {fileID: 4300000, guid: 8d7c51100b1d883438cc48ec75240d55, type: 3}
+  m_Mesh: {fileID: 4300000, guid: bedbc725043dced42a50009d4e1d47ea, type: 3}
 --- !u!54 &54035039587306324
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -1788,7 +1788,7 @@ MonoBehaviour:
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
-  MinPlayerMount: 0
+  MinPlayerMount: 2
   ObjectHeight: 10
   isCanFirstCheck: 0
   interMountType: 0
@@ -1897,7 +1897,7 @@ MonoBehaviour:
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
-  MinPlayerMount: 0
+  MinPlayerMount: 2
   ObjectHeight: 0
   isCanFirstCheck: 0
   interMountType: 0
@@ -2051,7 +2051,7 @@ MonoBehaviour:
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
-  MinPlayerMount: 0
+  MinPlayerMount: 2
   ObjectHeight: 10
   isCanFirstCheck: 0
   interMountType: 0
@@ -2076,7 +2076,7 @@ MonoBehaviour:
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
-  MinPlayerMount: 0
+  MinPlayerMount: 2
   ObjectHeight: 10
   isCanFirstCheck: 0
   interMountType: 0
@@ -2190,7 +2190,7 @@ MonoBehaviour:
   InterPosType: 2
   PlayerNextPositionType: 0
   NextPosition: {fileID: 0}
-  MinPlayerMount: 0
+  MinPlayerMount: 2
   ObjectHeight: 10
   isCanFirstCheck: 0
   interMountType: 0
