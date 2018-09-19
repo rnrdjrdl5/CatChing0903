@@ -28,6 +28,9 @@ public class LobbyUIManager : MonoBehaviour {
 
     public FadePanelScript fadePanelScript;
 
+    public TitlePanelScript titlePanelScript;
+
+
     private void Awake()
     {
         if (lobbyUIManager == null)
@@ -63,6 +66,9 @@ public class LobbyUIManager : MonoBehaviour {
 
         fadePanelScript = new FadePanelScript();
         fadePanelScript.InitData();
+
+        titlePanelScript = new TitlePanelScript();
+        titlePanelScript.InitData();
 
     }
    

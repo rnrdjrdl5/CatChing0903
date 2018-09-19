@@ -64,8 +64,7 @@ public class EffectAniManager : MonoBehaviour
     }
 
     public void FrameBreakEffect()
-    {
-
+    {        
         GameObject go = PoolingManager.GetInstance().CreateEffect(PoolingManager.EffctType.FRAME_EFFECT);
         go.transform.position = InterEffect.transform.position;
     }

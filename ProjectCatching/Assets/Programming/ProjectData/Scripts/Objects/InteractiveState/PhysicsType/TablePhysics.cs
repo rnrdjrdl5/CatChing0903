@@ -42,13 +42,21 @@ public class TablePhysics : MonoBehaviour {
         CoroSetOffPhysics = SetOffPhysics();
     }
 
+    private void OnDisable()
+    {
+        for (int i = subObjects.Length - 1; i >= 0; i--)
+        {
+            subObjects[i].SetActive(false);
+        }
+    }
+
 
 
     public void Action(Vector3 NormalVector3)
     {
 
         // 물체가 날라갈 방향, XZ 축
-        Vector3 NotY_NormalVector3 = NormalVector3;
+        Vector3 NotY_NormalVector3 = NormalVector3.normalized;
         NotY_NormalVector3.y = 0;
 
 
@@ -70,6 +78,7 @@ public class TablePhysics : MonoBehaviour {
 
         // 회전시키기
         rigidBody.AddTorque((QuatY * NotY_NormalVector3) * TorquePower, ForceMode.Impulse);
+
 
         // 코루틴 작동
         StartCoroutine(CoroSetOffPhysics);

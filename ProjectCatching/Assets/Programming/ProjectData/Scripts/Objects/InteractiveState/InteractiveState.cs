@@ -219,7 +219,6 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
             if (ActionType == EnumAction.PHYSICS)
             {
                 //CreateScore();
-
                 photonView.RPC("RPCTableAction", PhotonTargets.All, NormalVector3);
 
             }
@@ -432,6 +431,9 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
         if (interactiveObjectType == EnumInteractiveObject.TABLE ||
             interactiveObjectType == EnumInteractiveObject.CHAIR)
         {
+
+            Debug.Log("TableAction : " + normalVector3);
+            
             // 물리 컴포넌트 받기
             TablePhysics tablePhysics = GetComponent<TablePhysics>();
 

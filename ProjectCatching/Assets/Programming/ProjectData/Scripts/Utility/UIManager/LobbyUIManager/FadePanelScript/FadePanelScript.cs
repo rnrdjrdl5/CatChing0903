@@ -35,7 +35,6 @@ public class FadePanelScript : MonoBehaviour {
 
     public void FadeInEffect()
     {
-        Debug.Log("Fdea");
         FadeImageEffect.AddFadeEffectNode(FadeImage, lobbyUIManager.UIFadeTime, UIEffectNode.EnumFade.IN);
 
         lobbyUIManager.UpdateEvent += FadeImageEffect.EffectEventLobby;
@@ -43,7 +42,6 @@ public class FadePanelScript : MonoBehaviour {
 
     public void FadeOutEffect()
     {
-        Debug.Log("Fdea");
         FadeImageEffect.AddFadeEffectNode(FadeImage, lobbyUIManager.UIFadeTime, UIEffectNode.EnumFade.OUT);
 
         lobbyUIManager.UpdateEvent += FadeImageEffect.EffectEventLobby;

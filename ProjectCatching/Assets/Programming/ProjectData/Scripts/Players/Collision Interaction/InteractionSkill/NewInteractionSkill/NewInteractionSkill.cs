@@ -174,7 +174,7 @@ public class NewInteractionSkill : Photon.MonoBehaviour, IPunObservable {
                         interViewID = interactiveObject.GetPhotonView().viewID;
 
                         // 9. 플레이어 카메라 위치 저장, 동기화
-                        OriginalCameraPosition = springArmObject.transform.position;
+                        OriginalCameraPosition = springArmObject.armCamera.transform.position;
                     }
                 }
             }
@@ -361,9 +361,8 @@ public class NewInteractionSkill : Photon.MonoBehaviour, IPunObservable {
 
     private Vector3 AddPhysics(PoolingManager.EffctType physicsEffect)
     {
-        Vector3 PhysicsPower = Vector3.zero;
-
-        PhysicsPower = transform.position - OriginalCameraPosition;
+        // Vector3 PhysicsPower = PhysicsPower = transform.position - OriginalCameraPosition;
+        Vector3 PhysicsPower = transform.position - OriginalCameraPosition;
 
         GameObject go = PoolingManager.GetInstance().CreateEffectCameraShake(physicsEffect, photonView.isMine);
 
@@ -413,6 +412,7 @@ public class NewInteractionSkill : Photon.MonoBehaviour, IPunObservable {
                     break;
             }
 
+            Debug.Log(PhysicsPower);
             interactiveState.UseAction(PhysicsPower);
         }
 

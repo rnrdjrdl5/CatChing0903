@@ -425,7 +425,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1925726866383996}
   m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -2.9299998, y: -2.418, z: 5.8}
+  m_LocalPosition: {x: 3.81, y: -2.11, z: 9.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4690851284387872}
@@ -468,7 +468,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1505908918182170}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0.68, y: 0, z: 0}
+  m_LocalPosition: {x: -0.881, y: 0.035, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4596175566184794}
@@ -533,7 +533,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1978499692016372}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.6799998}
+  m_LocalPosition: {x: -0, y: 0.025, z: -0.897}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4596175566184794}
@@ -546,7 +546,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1117820716261544}
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0.68, y: 0, z: 0}
+  m_LocalPosition: {x: 0.892, y: 0.033, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4596175566184794}
@@ -559,7 +559,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907567690246882}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0.6799998}
+  m_LocalPosition: {x: -0, y: 0.043, z: 0.895}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4596175566184794}
@@ -1830,10 +1830,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df8b2e6dd1eaff4788b55db95a6472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YPower: 8
-  XZPower: 4
-  TorquePower: 25
-  tableMass: 1
+  YPower: 4
+  XZPower: 7
+  TorquePower: 12
+  tableMass: 0.5
   subObjectMass: 0
   subObjects: []
   CreateOffPhysicsObjectTime: 0.2
@@ -2004,10 +2004,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df8b2e6dd1eaff4788b55db95a6472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YPower: 8
-  XZPower: 4
-  TorquePower: 25
-  tableMass: 1
+  YPower: 4
+  XZPower: 7
+  TorquePower: 12
+  tableMass: 0.5
   subObjectMass: 0
   subObjects: []
   CreateOffPhysicsObjectTime: 0.2
@@ -2023,10 +2023,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df8b2e6dd1eaff4788b55db95a6472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YPower: 8
-  XZPower: 4
-  TorquePower: 25
-  tableMass: 1
+  YPower: 4
+  XZPower: 7
+  TorquePower: 12
+  tableMass: 0.5
   subObjectMass: 0
   subObjects: []
   CreateOffPhysicsObjectTime: 0.2
@@ -2092,10 +2092,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df8b2e6dd1eaff4788b55db95a6472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YPower: 12
+  YPower: 6
   XZPower: 3
-  TorquePower: 100
-  tableMass: 1
+  TorquePower: 10
+  tableMass: 0.5
   subObjectMass: 0.1
   subObjects:
   - {fileID: 1384878993820822}
@@ -2123,10 +2123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df8b2e6dd1eaff4788b55db95a6472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YPower: 8
-  XZPower: 4
-  TorquePower: 25
-  tableMass: 1
+  YPower: 4
+  XZPower: 7
+  TorquePower: 12
+  tableMass: 0.5
   subObjectMass: 0
   subObjects: []
   CreateOffPhysicsObjectTime: 0.2

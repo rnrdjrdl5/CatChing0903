@@ -35,6 +35,8 @@ public class MarbleState {
     {
         CollisionObject CollisionObjectScript = CollisionGameObject.GetComponent<CollisionObject>();
 
+
+
         CollisionObjectDamage CollisionObjectDamageScript = CollisionGameObject.GetComponent<CollisionObjectDamage>();
 
         CollisionObjectTime CollisionObjectTimeScript = CollisionGameObject.GetComponent<CollisionObjectTime>();
@@ -54,7 +56,7 @@ public class MarbleState {
         {
             CollisionObjectDamageScript.SetObjectDamage(MarbleDamage);
             CollisionObjectDamageScript.SetObjectDamageNumber(ObjectDamageNumber);
-            CollisionObjectDamageScript.EffectType = PoolingManager.EffctType.ATTACK;
+            CollisionObjectDamageScript.EffectType = PoolingManager.EffctType.BALL_HIT;
         }
 
         if (CollisionObjectTimeScript != null)

@@ -180,7 +180,6 @@ public class ObjectManager : MonoBehaviour {
     public void DeleteObjPropPlayer()
     {
 
-        //foreach (GameObject go in InterObj)
         for (int i = InterObj.Count-1; i >= 0; i--)
         
         {

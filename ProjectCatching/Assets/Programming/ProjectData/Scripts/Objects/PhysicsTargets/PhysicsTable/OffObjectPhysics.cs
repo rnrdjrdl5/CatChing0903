@@ -25,8 +25,9 @@ public class OffObjectPhysics : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Floor") && !isCheck)
-        {
+        /*   if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Floor") && !isCheck)
+           {*/
+        if (!isCheck) {
             isCheck = true;
             // StartCoroutine(CoroOffPhysics);
             gameObject.layer = LayerMask.NameToLayer("NoPlayerInterEnd");
@@ -48,12 +49,10 @@ public class OffObjectPhysics : MonoBehaviour {
                 go = PoolingManager.GetInstance().CreateEffect(PoolingManager.EffctType.SMALL_DUST_SMALL);
                 go.transform.position = collision.contacts[0].point;
             }
-
-
-
-
-
         }
+
+
+
     }
 
     IEnumerator OffPhysics()

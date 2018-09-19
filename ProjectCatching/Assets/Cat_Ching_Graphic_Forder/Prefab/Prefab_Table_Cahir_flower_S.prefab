@@ -462,7 +462,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1026837038039762}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0.68, y: 0, z: 0}
+  m_LocalPosition: {x: -0.986, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4314591070244858}
@@ -514,7 +514,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1377943936472152}
   m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 8.786, y: 1.061, z: 11.473}
+  m_LocalPosition: {x: 9.129, y: 1.061, z: 11.152}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4037390957521444}
@@ -545,7 +545,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1056339631871182}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0.6799998}
+  m_LocalPosition: {x: -0, y: 0, z: 0.913}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4314591070244858}
@@ -597,7 +597,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1790076396748276}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.6799998}
+  m_LocalPosition: {x: 0, y: 0, z: -0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4314591070244858}
@@ -636,7 +636,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1459994537464418}
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0.68, y: 0, z: 0}
+  m_LocalPosition: {x: 0.93, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4314591070244858}
@@ -1375,21 +1375,21 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1026837038039762}
-  m_Mesh: {fileID: 4300000, guid: 8d7c51100b1d883438cc48ec75240d55, type: 3}
+  m_Mesh: {fileID: 4300000, guid: bedbc725043dced42a50009d4e1d47ea, type: 3}
 --- !u!33 &33353304326811872
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1056339631871182}
-  m_Mesh: {fileID: 4300000, guid: 8d7c51100b1d883438cc48ec75240d55, type: 3}
+  m_Mesh: {fileID: 4300000, guid: bedbc725043dced42a50009d4e1d47ea, type: 3}
 --- !u!33 &33358067141678276
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1459994537464418}
-  m_Mesh: {fileID: 4300000, guid: 8d7c51100b1d883438cc48ec75240d55, type: 3}
+  m_Mesh: {fileID: 4300000, guid: bedbc725043dced42a50009d4e1d47ea, type: 3}
 --- !u!33 &33363367793172674
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1403,7 +1403,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1790076396748276}
-  m_Mesh: {fileID: 4300000, guid: 8d7c51100b1d883438cc48ec75240d55, type: 3}
+  m_Mesh: {fileID: 4300000, guid: bedbc725043dced42a50009d4e1d47ea, type: 3}
 --- !u!33 &33431976197162502
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1952,10 +1952,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df8b2e6dd1eaff4788b55db95a6472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YPower: 8
-  XZPower: 4
-  TorquePower: 25
-  tableMass: 1
+  YPower: 4
+  XZPower: 7
+  TorquePower: 12
+  tableMass: 0.5
   subObjectMass: 0
   subObjects: []
   CreateOffPhysicsObjectTime: 0.2
@@ -1984,10 +1984,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df8b2e6dd1eaff4788b55db95a6472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YPower: 8
-  XZPower: 4
-  TorquePower: 25
-  tableMass: 1
+  YPower: 4
+  XZPower: 7
+  TorquePower: 12
+  tableMass: 0.5
   subObjectMass: 0
   subObjects: []
   CreateOffPhysicsObjectTime: 0.2
@@ -2003,10 +2003,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df8b2e6dd1eaff4788b55db95a6472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YPower: 8
-  XZPower: 4
-  TorquePower: 25
-  tableMass: 1
+  YPower: 4
+  XZPower: 7
+  TorquePower: 12
+  tableMass: 0.5
   subObjectMass: 0
   subObjects: []
   CreateOffPhysicsObjectTime: 0.2
@@ -2035,10 +2035,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df8b2e6dd1eaff4788b55db95a6472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YPower: 12
+  YPower: 6
   XZPower: 3
-  TorquePower: 100
-  tableMass: 1
+  TorquePower: 10
+  tableMass: 0.5
   subObjectMass: 0.1
   subObjects:
   - {fileID: 1357302492722426}
@@ -2234,10 +2234,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df8b2e6dd1eaff4788b55db95a6472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YPower: 8
-  XZPower: 4
-  TorquePower: 25
-  tableMass: 1
+  YPower: 4
+  XZPower: 7
+  TorquePower: 12
+  tableMass: 0.5
   subObjectMass: 0
   subObjects: []
   CreateOffPhysicsObjectTime: 0.2
