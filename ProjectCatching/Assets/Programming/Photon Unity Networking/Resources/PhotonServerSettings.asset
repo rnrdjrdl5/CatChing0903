@@ -96,4 +96,8 @@ MonoBehaviour:
   - OnRope
   - RPCDeadEffect
   - RPCLoadingScene
+  - RPCTestdd
+  - RPCTutoActionCheckGameStart
+  - RPCTutoCreatePlayer
+  - RPCTutoPlayingGame
   DisableAutoOpenWizard: 1

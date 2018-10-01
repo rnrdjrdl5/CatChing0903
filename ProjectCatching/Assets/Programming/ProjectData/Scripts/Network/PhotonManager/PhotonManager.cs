@@ -38,13 +38,15 @@ public partial class PhotonManager : Photon.PunBehaviour , IPunObservable
     delegate void ConditionLoop();
     delegate int RPCActionType();
     
-    delegate void ActionMine(params object[] obj);
+    delegate void ActionMine_Param(params object[] obj);
+    delegate void ActionMine();
 
     Condition condition;
     ConditionLoop conditionLoop;
     RPCActionType rPCActionType;
 
     ActionMine actionMine;
+    ActionMine_Param actionMine_Param;
 
     /**** public ****/
     
@@ -100,6 +102,8 @@ public partial class PhotonManager : Photon.PunBehaviour , IPunObservable
     private bool isUse30Second = false;
 
 
+    // 튜토리얼모드인지 여부 확인
+    public bool isTutorial;
 
     /**** 접근자 ****/
 
@@ -130,30 +134,60 @@ public partial class PhotonManager : Photon.PunBehaviour , IPunObservable
 
     private void Start()
     {
+        
         uIManager = UIManager.GetInstance();
+        
+        // 플레이어 위치 씬 변경
+        ExitGames.Client.Photon.Hashtable ht = new ExitGames.Client.Photon.Hashtable { { "Scene", "InGame" } };
+        PhotonNetwork.player.SetCustomProperties(ht);
+
+
+        condition = new Condition(CheckGameStart);
+        conditionLoop = new ConditionLoop(NoAction);
+        rPCActionType = new RPCActionType(NoRPCActonCondition);
+
+        // 튜토리얼 아님
+        if (!isTutorial)
+        {
+            // 캐릭터 선택 효과 발생
+            uIManager.selectCharPanelScript.LockEvent();
+
+            // 게임 시작
+            IEnumCoro = CoroTrigger(condition, conditionLoop, rPCActionType, "RPCActionCheckGameStart");
+        }
+
+        else
+        {
+            IEnumCoro = CoroTrigger(condition, conditionLoop, rPCActionType, "RPCTutoActionCheckGameStart");
+        }
+        StartCoroutine(IEnumCoro);
+
+        
+
+
+    }
+
+    // 현재 문제점
+    // CustomProperty는 각자가 가짐. 해당 플레이어를 찾아서 점수를 받아야 함.
+    // 그런데, 튜토리얼은 한명밖에 없고 쥐인경우 Cat을 찾지 못해서 점수시스템에 문제가 생김.
+
+
+    // TestPhoton에서 실시, 나중에 없애기.
+    public void TutorialStart()
+    {
+        /*uIManager = UIManager.GetInstance();
 
         // 플레이어 위치 씬 변경
         ExitGames.Client.Photon.Hashtable ht = new ExitGames.Client.Photon.Hashtable { { "Scene", "InGame" } };
         PhotonNetwork.player.SetCustomProperties(ht);
 
 
-        // 캐릭터 선택 효과 발생
-        uIManager.selectCharPanelScript.LockEvent();
-
-
-
-
-
-        // 게임 시작
-
         condition = new Condition(CheckGameStart);
         conditionLoop = new ConditionLoop(NoAction);
         rPCActionType = new RPCActionType(NoRPCActonCondition);
-
-        IEnumCoro = CoroTrigger(condition, conditionLoop, rPCActionType, "RPCActionCheckGameStart");
-        StartCoroutine(IEnumCoro);
-
-
+   
+        IEnumCoro = CoroTrigger(condition, conditionLoop, rPCActionType, "RPCTutoActionCheckGameStart");
+        StartCoroutine(IEnumCoro);*/
     }
 
 
@@ -331,6 +365,7 @@ public partial class PhotonManager : Photon.PunBehaviour , IPunObservable
         return isInGame;
     }
 
+    bool AlwaysCondition() { return true; }
 
 
     /**** 특수 코루틴****/
@@ -367,7 +402,7 @@ public partial class PhotonManager : Photon.PunBehaviour , IPunObservable
 
     }
 
-    IEnumerator CoroTriggerMine(Condition condition, ConditionLoop conditionLoop, ActionMine actionMine, params object[] obj)
+    IEnumerator CoroTriggerMine(Condition condition, ConditionLoop conditionLoop, ActionMine_Param actionMine, params object[] obj)
     {
         while (true)
         {
@@ -389,6 +424,30 @@ public partial class PhotonManager : Photon.PunBehaviour , IPunObservable
             yield return null;
         }
     }
+
+    IEnumerator CoroTriggerMine(Condition condition, ConditionLoop conditionLoop, ActionMine actionMine)
+    {
+        while (true)
+        {
+
+            bool AcceptCondition = condition();
+
+            if (AcceptCondition)
+            {
+
+                // 액션 사용, 조건 판단해서 사용.
+                actionMine();
+
+
+                yield break;
+            }
+            else
+                conditionLoop();
+
+            yield return null;
+        }
+    }
+
 
 
 

@@ -41,7 +41,6 @@ public class RunCdtAct : DefaultConditionAction
                 if(skillCtnCdtOption.GetskillConditionContinueOption().GetisUseCtnSkill() == false)
                 {
 
-                    Debug.Log("1");
                     // 스킬 사용
                     defaultNewSkill.UseSkill();
 
@@ -60,7 +59,6 @@ public class RunCdtAct : DefaultConditionAction
 
            if(defaultNewSkill.CheckCtnState())
             {
-                Debug.Log("2");
                 // 지속성 스킬을 사용합니다.
                 defaultNewSkill.UseCtnSkill();
 
@@ -69,7 +67,6 @@ public class RunCdtAct : DefaultConditionAction
             }
             else
             {
-                Debug.Log("3");
                 // 퇴장스킬
                 defaultNewSkill.ExitCtnSkill();
 
@@ -88,11 +85,9 @@ public class RunCdtAct : DefaultConditionAction
             // 2. 스킬 사용중인가?
             if (skillCtnCdtOption.GetskillConditionContinueOption().GetisUseCtnSkill() == true)
             {
-                Debug.Log("5");
                 if (defaultNewSkill.MaxCtnCoolTime <=
                     defaultNewSkill.GetNowCtnCoolTime() + defaultNewSkill.IncreaseCoolTimeTick * Time.deltaTime)
                 {
-                    Debug.Log("6");
 
                     defaultNewSkill.ExitCtnSkill();
                     skillCtnCdtOption.GetskillConditionContinueOption().SetisUseCtnSkill(false);
@@ -112,7 +107,6 @@ public class RunCdtAct : DefaultConditionAction
         //스킬 사용중 체크
         if(skillCtnCdtOption.GetskillConditionContinueOption().GetisUseCtnSkill() == true)
         {
-            Debug.Log("7");
             // 스킬 해제 조건 체크
             if (skillCtnCdtOption.CheckContinueExit())
             {
@@ -120,7 +114,7 @@ public class RunCdtAct : DefaultConditionAction
                 //  상태판단
                 if(defaultNewSkill.CheckCtnState())
                 {
-                    Debug.Log("8");
+
                     defaultNewSkill.ExitCtnSkill();
                     skillCtnCdtOption.GetskillConditionContinueOption().SetisUseCtnSkill(false);
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public partial class PhotonManager
 {
+
+
     // UI 보여주고 게임 종료 조건 파악하는 트리거 사용
     [PunRPC]
     void RPCActionCheckCreatePlayer()
@@ -41,16 +43,18 @@ public partial class PhotonManager
 
 
 
-        // 게임 종료 조건 시작
-        condition = new Condition(CheckGameFinish);
-        conditionLoop = new ConditionLoop(NoAction);
-        rPCActionType = new RPCActionType(MasterResultCheck);
-        IEnumCoro = CoroTrigger(condition, conditionLoop, rPCActionType, "RPCActionCheckGameFinish");
-        StartCoroutine(IEnumCoro);
+            // 게임 종료 조건 시작
+            condition = new Condition(CheckGameFinish);
+            conditionLoop = new ConditionLoop(NoAction);
+            rPCActionType = new RPCActionType(MasterResultCheck);
+            IEnumCoro = CoroTrigger(condition, conditionLoop, rPCActionType, "RPCActionCheckGameFinish");
+            StartCoroutine(IEnumCoro);
 
 
-        StartCoroutine(Timer());
+            StartCoroutine(Timer());
 
+
+            
 
     }
 
@@ -168,4 +172,10 @@ public partial class PhotonManager
         yield break;
     }
 
+
+    [PunRPC]
+    void RPCTutoPlayingGame()
+    {
+        CurrentPlayer.GetComponent<PlayerState>().isCanActive = true;
+    }
 }

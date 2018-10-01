@@ -431,8 +431,6 @@ public class InteractiveState : Photon.MonoBehaviour, IPunObservable {
         if (interactiveObjectType == EnumInteractiveObject.TABLE ||
             interactiveObjectType == EnumInteractiveObject.CHAIR)
         {
-
-            Debug.Log("TableAction : " + normalVector3);
             
             // 물리 컴포넌트 받기
             TablePhysics tablePhysics = GetComponent<TablePhysics>();

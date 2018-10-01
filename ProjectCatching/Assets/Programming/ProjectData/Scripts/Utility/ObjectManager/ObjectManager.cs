@@ -73,14 +73,18 @@ public class ObjectManager : MonoBehaviour {
     public void RemoveObject(int vID)
     {
 
+        Debug.Log("sad");
         for (int i = 0; i < InterObj.Count; i++)
         {
-
+            Debug.Log("sad2");
             if (InterObj[i].GetPhotonView().viewID == vID)
             {
+                Debug.Log("sad3");
 
-                // 쥐 플레이어 인 경우
+                // 고양이 플레이어 인 경우
                 if ((string)PhotonNetwork.player.CustomProperties["PlayerType"] == "Cat")
+                // 10.01 테스트, 마스터 에서 처리.
+                //if (PhotonNetwork.player.IsMasterClient)
                 {
 
                     float NowCatScore = (float)PhotonNetwork.player.CustomProperties["CatScore"];

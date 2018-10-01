@@ -35,4 +35,11 @@ public class TitlePanelScript{
         FadeTitleEffect.AddFadeEffectNode(CatLogoImage, lobbyUIManager.UIFadeTime, UIEffectNode.EnumFade.OUT);
         lobbyUIManager.UpdateEvent += FadeTitleEffect.EffectEventLobby;
     }
+
+    public void SetActive(bool isActive)
+    {
+        AnyKeyImage.SetActive(false);
+        CatLogoImage.SetActive(false);
+        TitlePanel.SetActive(false);
+    }
 }

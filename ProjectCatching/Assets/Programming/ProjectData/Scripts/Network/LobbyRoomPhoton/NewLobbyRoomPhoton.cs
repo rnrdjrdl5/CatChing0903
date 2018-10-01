@@ -167,8 +167,8 @@ public class NewLobbyRoomPhoton : Photon.PunBehaviour
 
 
         gameStateType = EnumGameState.LOBBY;
-
         
+        lobbyUIManager.titlePanelScript.SetActive(false);
 
         DeleSetOn = lobbyUIManager.lobbyPanelScript.SetActive;
         DeleFadeIn = lobbyUIManager.lobbyPanelScript.FadeInEffect;

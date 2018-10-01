@@ -82,4 +82,35 @@ public partial class PhotonManager
 
     }
 
+    [PunRPC]
+    void RPCTutoActionCheckGameStart()
+    {
+
+        // 1. 선택한 플레이어로 생성한다. 임시로 쥐
+        ExitGames.Client.Photon.Hashtable MouseHash = new ExitGames.Client.Photon.Hashtable { { "PlayerType", "Mouse" } };
+        PhotonNetwork.player.SetCustomProperties(MouseHash);
+        photonView.RPC("RPCTutoCreatePlayer", PhotonTargets.All);
+
+        // 플레이어 생성 완료 체크
+        condition = new Condition(CheckLoading);
+        conditionLoop = new ConditionLoop(NoAction);
+        rPCActionType = new RPCActionType(NoRPCActonCondition);
+
+
+        // 인원수에 따른 물체 삭제
+        if (objectManager != null)
+        {
+            objectManager.DeleteObjPropPlayer();
+
+            objectManager.RegisterObjectMount();
+
+            objectManager.CalcObjectMag();
+        }
+
+        // 최대 게이지 표현
+        GameTimeOutCondition = mouseWinScoreCondition[0];
+
+        IEnumCoro = CoroTrigger(condition, conditionLoop, rPCActionType, "RPCTutoPlayingGame");
+        StartCoroutine(IEnumCoro);
+    }
 }

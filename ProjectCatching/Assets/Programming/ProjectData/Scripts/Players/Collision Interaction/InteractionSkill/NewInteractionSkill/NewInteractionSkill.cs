@@ -412,7 +412,6 @@ public class NewInteractionSkill : Photon.MonoBehaviour, IPunObservable {
                     break;
             }
 
-            Debug.Log(PhysicsPower);
             interactiveState.UseAction(PhysicsPower);
         }
 

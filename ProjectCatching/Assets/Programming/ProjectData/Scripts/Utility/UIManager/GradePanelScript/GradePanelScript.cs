@@ -89,13 +89,14 @@ public class GradePanelScript{
     {
         float CatGradeScore = 0;
         for (int i = 0; i < PhotonNetwork.playerList.Length; i++)
-        {
-            if ((string)PhotonNetwork.playerList[i].CustomProperties["PlayerType"] == "Cat")
-            {
-                CatGradeScore = (float)PhotonNetwork.playerList[i].CustomProperties["CatScore"];
-                break;
-            }
-        }
+          {
+              if ((string)PhotonNetwork.playerList[i].CustomProperties["PlayerType"] == "Cat")
+              {
+                  CatGradeScore = (float)PhotonNetwork.playerList[i].CustomProperties["CatScore"];
+                  break;
+              }
+         }
+       // CatGradeScore = (float)PhotonNetwork.player.CustomProperties["CatScore"];
 
         PhotonManager photonManager = PhotonManager.GetInstance();
 
@@ -131,7 +132,6 @@ public class GradePanelScript{
 
     private void ShakeRestaurantEvent()
     {
-        Debug.Log("이벤트작동");
         uIEffect.CheckResetUIEffect(GradePanel);
         uIEffect.originalLocalPosition = GradePanel.transform.localPosition;
         uIEffect.AddShakeEffectNode(GradePanel, ShakeFrequency, ShakePower, UIEffectNode.ShakeType.RIGHTLEFT);

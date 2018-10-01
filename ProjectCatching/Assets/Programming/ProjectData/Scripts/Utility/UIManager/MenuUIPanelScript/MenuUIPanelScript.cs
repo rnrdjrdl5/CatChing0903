@@ -5,7 +5,11 @@ using UnityEngine;
 public class MenuUIPanelScript {
 
     public GameObject MenuBookUI { get; set; }
-    private void InitMenuBookUI() { MenuBookUI = GameObject.Find("MenuBookUI").gameObject; }
+    private void InitMenuBookUI() {
+
+        MenuBookUI = GameObject.Find("MenuBookUI").gameObject;
+
+    }
 
     public GameObject MenuBookCamera { get; set; }
     private void InitMenuBookCamera() { MenuBookCamera = MenuBookUI.transform.Find("MenuBookCamera").gameObject; }
