@@ -175,7 +175,7 @@ public partial class PhotonManager : Photon.PunBehaviour , IPunObservable
     // TestPhoton에서 실시, 나중에 없애기.
     public void TutorialStart()
     {
-        /*uIManager = UIManager.GetInstance();
+        uIManager = UIManager.GetInstance();
 
         // 플레이어 위치 씬 변경
         ExitGames.Client.Photon.Hashtable ht = new ExitGames.Client.Photon.Hashtable { { "Scene", "InGame" } };
@@ -187,7 +187,7 @@ public partial class PhotonManager : Photon.PunBehaviour , IPunObservable
         rPCActionType = new RPCActionType(NoRPCActonCondition);
    
         IEnumCoro = CoroTrigger(condition, conditionLoop, rPCActionType, "RPCTutoActionCheckGameStart");
-        StartCoroutine(IEnumCoro);*/
+        StartCoroutine(IEnumCoro);
     }
 
 

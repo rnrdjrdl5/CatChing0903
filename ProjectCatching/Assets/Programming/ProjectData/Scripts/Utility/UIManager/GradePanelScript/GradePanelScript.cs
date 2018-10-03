@@ -88,15 +88,15 @@ public class GradePanelScript{
     void UpdateGrade()
     {
         float CatGradeScore = 0;
-        for (int i = 0; i < PhotonNetwork.playerList.Length; i++)
+      /*  for (int i = 0; i < PhotonNetwork.playerList.Length; i++)
           {
               if ((string)PhotonNetwork.playerList[i].CustomProperties["PlayerType"] == "Cat")
               {
                   CatGradeScore = (float)PhotonNetwork.playerList[i].CustomProperties["CatScore"];
                   break;
               }
-         }
-       // CatGradeScore = (float)PhotonNetwork.player.CustomProperties["CatScore"];
+         }*/
+        CatGradeScore = (float)PhotonNetwork.player.CustomProperties["StoreScore"];
 
         PhotonManager photonManager = PhotonManager.GetInstance();
 

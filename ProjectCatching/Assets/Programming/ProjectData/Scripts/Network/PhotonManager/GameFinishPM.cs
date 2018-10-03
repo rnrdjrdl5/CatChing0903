@@ -169,14 +169,15 @@ public partial class PhotonManager
     public EnumGameFinish TimeOutGameResult()
     {
         float CatGradeScore = 0;
-        for (int i = 0; i < PhotonNetwork.playerList.Length; i++)
+        /*for (int i = 0; i < PhotonNetwork.playerList.Length; i++)
         {
             if ((string)PhotonNetwork.playerList[i].CustomProperties["PlayerType"] == "Cat")
             {
                 CatGradeScore = (float)PhotonNetwork.playerList[i].CustomProperties["CatScore"];
                 break;
             }
-        }
+        }*/
+        CatGradeScore = (float)PhotonNetwork.player.CustomProperties["StoreScore"];
 
         float CatGradePersent = (float)CatGradeScore / (float)PhotonManager.GetInstance().MaxCatScore * 100;
 

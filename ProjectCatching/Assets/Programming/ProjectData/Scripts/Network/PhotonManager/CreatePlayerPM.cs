@@ -15,6 +15,9 @@ public partial class PhotonManager
         // 플레이어 생성
         string PlayerType = (string)PhotonNetwork.player.CustomProperties["PlayerType"];
 
+        // 스코어 추가
+        AddPlayerScore("StoreScore", MaxCatScore);
+
         // 고양이는 추가로 고양이가 될 수 없도록 해쉬값 생성
         if (PlayerType == "Cat")
         {
@@ -24,10 +27,8 @@ public partial class PhotonManager
             PhotonNetwork.player.SetCustomProperties(
                 new ExitGames.Client.Photon.Hashtable { { "UseBoss", true } });
 
-
-            AddPlayerScore("CatScore", MaxCatScore);
-
         }
+  
 
         else if (PlayerType == "Mouse")
         {
@@ -76,8 +77,8 @@ public partial class PhotonManager
             Debug.Log("수행완료3");
         }
 
-        GameTimeOutCondition = mouseWinScoreCondition[MousePlayerListOneSort.Count -1];
-        playTimerNumber = playTimes[MousePlayerListOneSort.Count -1];
+        GameTimeOutCondition = mouseWinScoreCondition[MousePlayerListOneSort.Count - 1];
+        playTimerNumber = playTimes[MousePlayerListOneSort.Count - 1];
 
 
 
@@ -124,7 +125,7 @@ public partial class PhotonManager
         }
 
         //쥐 고양이 상관없이 스코어 설정
-        AddPlayerScore("CatScore", MaxCatScore); 
+        AddPlayerScore("StoreScore", MaxCatScore); 
 
         PhotonNetwork.player.SetCustomProperties(
             new ExitGames.Client.Photon.Hashtable { { "Offset", "LoadingComplete" } });

@@ -433,7 +433,7 @@ public class NewLobbyRoomPhoton : Photon.PunBehaviour
 
         ExitGames.Client.Photon.Hashtable CatScore = new ExitGames.Client.Photon.Hashtable
         {
-            { "CatScore",0f }
+            { "StoreScore",0f }
         };
 
         ExitGames.Client.Photon.Hashtable Round = new ExitGames.Client.Photon.Hashtable

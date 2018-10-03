@@ -104,7 +104,8 @@ public partial class PhotonManager
             return false;
         }
 
-        float CatGradeScore = (float)CatPhotonPlayer.CustomProperties["CatScore"];
+        //float CatGradeScore = (float)CatPhotonPlayer.CustomProperties["CatScore"];
+        float CatGradeScore = (float)PhotonNetwork.player.CustomProperties["StoreScore"];
 
 
         float CatGradePersent;
@@ -177,5 +178,16 @@ public partial class PhotonManager
     void RPCTutoPlayingGame()
     {
         CurrentPlayer.GetComponent<PlayerState>().isCanActive = true;
+
+        GameObject go = GameObject.Find("TutorialGuide");
+        if (go == null) return;
+
+        TutorialGuide tg = go.GetComponent<TutorialGuide>();
+        if (tg == null) return;
+        Debug.Log("수행");
+
+        tg.StartTutorial();
+
+        
     }
 }

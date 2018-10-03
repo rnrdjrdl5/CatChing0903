@@ -82,36 +82,34 @@ public class ObjectManager : MonoBehaviour {
                 Debug.Log("sad3");
 
                 // 고양이 플레이어 인 경우
-                if ((string)PhotonNetwork.player.CustomProperties["PlayerType"] == "Cat")
-                // 10.01 테스트, 마스터 에서 처리.
-                //if (PhotonNetwork.player.IsMasterClient)
-                {
+                /*  if ((string)PhotonNetwork.player.CustomProperties["PlayerType"] == "Cat")
+                  {*/
 
-                    float NowCatScore = (float)PhotonNetwork.player.CustomProperties["CatScore"];
+                float NowCatScore = (float)PhotonNetwork.player.CustomProperties["StoreScore"];
 
-                    InteractiveState IS = InterObj[i].GetComponent<InteractiveState>();
+                InteractiveState IS = InterObj[i].GetComponent<InteractiveState>();
 
-                    float Score;
-                    if (IS.ObjectHeight == 0 || IS.InterObjectMag == 0) Score = 0;
+                float Score;
+                if (IS.ObjectHeight == 0 || IS.InterObjectMag == 0) Score = 0;
 
-                    else Score = IS.InterObjectMag * IS.ObjectHeight;
+                else Score = IS.InterObjectMag * IS.ObjectHeight;
 
 
-                    float NextCatScore = NowCatScore - Score;
-                    if (NextCatScore <= 0)
-                        NextCatScore = 0;
+                float NextCatScore = NowCatScore - Score;
+                if (NextCatScore <= 0)
+                    NextCatScore = 0;
 
 
-                    PhotonNetwork.player.SetCustomProperties(new ExitGames.Client.Photon.Hashtable { { "CatScore", NextCatScore } });
+                PhotonNetwork.player.SetCustomProperties(new ExitGames.Client.Photon.Hashtable { { "StoreScore", NextCatScore } });
 
 
-                    Debug.Log("가중치 :" + IS.InterObjectMag);
-                    Debug.Log("비율 :" + IS.ObjectHeight);
+                Debug.Log("가중치 :" + IS.InterObjectMag);
+                Debug.Log("비율 :" + IS.ObjectHeight);
 
-                    Debug.Log("점수 : " + Score);
+                Debug.Log("점수 : " + Score);
 
 
-                }
+                // }
                 // 오브젝트에서 삭제
                 InterObj.Remove(InterObj[i]);
 
@@ -120,7 +118,7 @@ public class ObjectManager : MonoBehaviour {
                     Debug.LogWarning("비었음. 에러");
                     return;
                 }
-                    RemoveEvent();
+                RemoveEvent();
 
 
             }
