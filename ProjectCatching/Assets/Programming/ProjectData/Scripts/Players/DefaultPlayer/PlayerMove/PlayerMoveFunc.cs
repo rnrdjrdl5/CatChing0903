@@ -82,13 +82,13 @@ public partial class PlayerMove
             if (MoveCondition())
             {
 
-                //if (characterController.isGrounded)
                 if(IsLandGround())
                 {
+
                     float tempDirY = MoveDir.y;
                     // 1. 플레이어 이동방향 설정
                     MoveDir = new Vector3(HSpeed,0, VSpeed);
-
+                        
                     // 2. 노말처리
                     float NormalsqrMag = MoveDir.normalized.sqrMagnitude;
 

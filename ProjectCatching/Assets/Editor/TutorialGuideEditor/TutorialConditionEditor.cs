@@ -13,6 +13,9 @@ public partial class TutorialGuideEditor
             case TutorialCondition.EnumTutorialCondition.PLACE:
                 PlaceInspector(nowCondition);
                 break;
+            case TutorialCondition.EnumTutorialCondition.ONMOUSE:
+                OnMouseInspector(nowCondition);
+                break;
         }
     }
 
@@ -39,6 +42,14 @@ public partial class TutorialGuideEditor
             nowCondition.checkTutorialPlace =
                 nowCondition.tutorialPlace.GetComponent<CheckTutorialPlace>();
         }
+    }
+
+    void OnMouseInspector(TutorialCondition nowCondition)
+    {
+        // 1. 텍스트 타입 설정
+        nowCondition.onMouseType = (TutorialCondition.EnumOnMouse)EditorGUILayout.EnumPopup
+        ("마우스 대상",
+        nowCondition.onMouseType);
     }
 }
 

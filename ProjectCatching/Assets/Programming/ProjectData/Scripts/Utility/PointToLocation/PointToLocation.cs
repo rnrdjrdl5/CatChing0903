@@ -22,9 +22,12 @@ public class PointToLocation{
 
         RaycastHit hit;
 
+
+        // 플레이어 여부체크
+        if (SpringArmObject.GetInstance().PlayerObject == null) { Debug.LogWarning("에러"); return null; }
+
         Vector3 playerForward = SpringArmObject.GetInstance().PlayerObject.transform.forward;
         playerForward.y = cameraObject.transform.forward.y;
-
 
         if (Physics.Raycast(cameraObject.transform.position,
             MouseVector3,

@@ -5,7 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class TutorialElement{
 
-
     // 조건
     public TutorialCondition[] tutorialConditions;
     public int maxTutorialCondition;
@@ -14,6 +13,7 @@ public class TutorialElement{
     public TutorialAction[] tutorialActions;
     public int maxTutorialAction;
 
+ 
 
     // 튜토리얼 시작
     public bool CheckCondition()
@@ -39,7 +39,15 @@ public class TutorialElement{
         for (int i = 0; i < nowCount; i++)
         {
 
-            tutorialActions[i].UseAction();
+            // 1. 액션 수행
+            float waitTime = tutorialActions[i].UseAction();
+            float tempTime = 0.0f;
+            // 대기시간이 지날 떄 까지 대기
+            while (true)
+            {
+                if (tempTime >= waitTime) break;
+                else tempTime += Time.deltaTime;
+            }
         }
     }
 }

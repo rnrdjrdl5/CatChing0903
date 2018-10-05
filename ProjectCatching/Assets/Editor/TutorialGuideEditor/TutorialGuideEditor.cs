@@ -8,12 +8,13 @@ public partial class TutorialGuideEditor : Editor {
 
     TutorialGuide tutorialGuide;
     TutorialPlace tutorialPlace;
-    
+    TutorialAI tutorialAI;
 
     private void OnEnable()
     {
         tutorialGuide = (TutorialGuide)target;
         tutorialPlace = tutorialGuide.GetComponent<TutorialPlace>();
+        tutorialAI = tutorialGuide.GetComponent<TutorialAI>();
     }
 
     public override void OnInspectorGUI()
@@ -36,7 +37,7 @@ public partial class TutorialGuideEditor : Editor {
             EditorGUILayout.Space();
             EditorGUILayout.LabelField("--- " + (i+1) + " 번째 튜토리얼 사항" + " ---");
 
-
+            
             // 간단하게 튜토리얼 속성 사용
             TutorialElement nowElement = tutorialPlayer[i];
 

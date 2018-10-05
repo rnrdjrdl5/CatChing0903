@@ -19,6 +19,7 @@ public class MessageImageScript : MonoBehaviour {
         image = GetComponent<Image>();
 
 
+
         Transform tempTransform = gameObject.transform.Find("tutorialMsgText");
 
         if (tempTransform == null) return;
@@ -26,7 +27,7 @@ public class MessageImageScript : MonoBehaviour {
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+       /* if (Input.GetKeyDown(KeyCode.Q))
         {
             PrintMessage("Hello~!~", EnumMessageSize.BIG);
         }
@@ -39,12 +40,12 @@ public class MessageImageScript : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.E))
         {
             PrintMessage("ToMeet~!~", EnumMessageSize.SMALL);
-        }
+        }*/
     }
 
 
 
-    public enum EnumMessageSize { SMALL , NORMAL , BIG }
+    public enum EnumMessageSize { SMALL , NORMAL , BIG } // 주의점 , TutorialAction과 다른 열거형  사용, 순서를 맞추자.
 
     public float[] messageBoxSize;
     public float sizeOffset;

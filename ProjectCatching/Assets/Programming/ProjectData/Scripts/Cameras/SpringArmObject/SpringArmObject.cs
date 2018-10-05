@@ -62,7 +62,7 @@ public class SpringArmObject : MonoBehaviour
     public PlayerMove PlayerMove;
 
 
-    public GameObject PlayerObject { get; set; }
+    public GameObject PlayerObject;// { get; set; }
     public GameObject armCamera { get; set; }
 
     public Vector3 SpringArmPosition;

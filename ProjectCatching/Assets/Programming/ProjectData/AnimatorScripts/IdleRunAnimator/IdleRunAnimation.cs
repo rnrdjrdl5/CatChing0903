@@ -23,12 +23,12 @@ public class IdleRunAnimation : StateMachineBehaviour {
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         
 
-        /*if (TS.GetPlayerCondition() == PlayerState.ConditionEnum.IDLE ||
-            TS.GetPlayerCondition() == PlayerState.ConditionEnum.RUN)
-        {*/
+
+
         if (!animator.IsInTransition(layerIndex))
         {
             TS = animator.gameObject.GetComponent<PlayerState>();
+            if (TS == null) return;
 
             if (animator.GetFloat("DirectionX") == 0 && animator.GetFloat("DirectionY") == 0)
             {
@@ -39,7 +39,6 @@ public class IdleRunAnimation : StateMachineBehaviour {
                 TS.SetPlayerCondition(PlayerState.ConditionEnum.RUN);
             }
         }
-       // }
 
     }
 

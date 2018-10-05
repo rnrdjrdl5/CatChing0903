@@ -6,24 +6,57 @@ using UnityEngine;
 public class TutorialAction{
 
     // 액션타입.
-    public enum EnumTutorialAction { MESSAGE , WAIT, DEBUG}
+    public enum EnumTutorialAction { MESSAGE , WAIT, DEBUG, EMOTION}
     public EnumTutorialAction tutorialActionType;
 
     // 텍스트용
-    public string MessageText;
-    public enum EnumMessageSize { SMALL, NORMAL, BIG };
+    public string messageText;
+    public enum EnumMessageSize { SMALL, NORMAL, BIG };     // 주의점 , MessageImageScript와 다른 열거형  사용, 순서를 맞추자.
     public EnumMessageSize messageSizeType;
 
+    // 메세지 박스
+    public GameObject messageObject;
+    public MessageImageScript messageImageScript;
 
-    public void UseAction()
+    // 대기시간
+    public float waitTime;
+
+    // 타겟
+    public enum EnumTutorialAI { TOMATO };
+    public EnumTutorialAI tutorialAIType;
+
+    // 이모티콘 
+    public enum EnumEmoticon { HI};
+    public EnumEmoticon emoticonType;
+
+    public float UseAction()
     {
+        float returnTime = 0f;
 
         switch (tutorialActionType)
         {
-            case EnumTutorialAction.DEBUG:
+            case EnumTutorialAction.DEBUG:      
                 Debug.Log("DebugLog");
                 break;
 
+            case EnumTutorialAction.WAIT:
+                returnTime = waitTime;
+                break;
+
+            case EnumTutorialAction.MESSAGE:
+                messageObject.SetActive(true);
+                messageImageScript.PrintMessage(messageText, (MessageImageScript.EnumMessageSize)messageSizeType);
+                break;
+
+            case EnumTutorialAction.EMOTION:
+                // 1. 타겟의 스킬을 사용.
+                
+                break;
+
         }
+
+        return returnTime;
     }
+
+
 }
