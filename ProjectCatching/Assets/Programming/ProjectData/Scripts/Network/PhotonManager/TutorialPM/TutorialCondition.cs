@@ -5,7 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class TutorialCondition{
 
+    // 최대거리
     const float INFINIFY_DISTANCE = 10000f;
+
 
 
 
@@ -16,7 +18,7 @@ public class TutorialCondition{
 
 
     // 조건
-    public enum EnumTutorialCondition { PLACE, ALWAYS, ONMOUSE};
+    public enum EnumTutorialCondition { PLACE, ALWAYS, ONMOUSE , USEACTIVE};
     public EnumTutorialCondition tutorialConditionType;
 
     // 이동 위치
@@ -29,7 +31,29 @@ public class TutorialCondition{
     // 마우스 올려놓기 대상
     public enum EnumOnMouse { TOMATO};
     public EnumOnMouse onMouseType;
-    
+
+    // 액티브 사용 시
+    public enum EnumActive { SPEEDRUN };
+    public EnumActive activeType;
+    public float activeMount;
+
+    // 스킬 사용시간
+    public float playerActiveMount;
+    public void IncreateTime()
+    {
+        playerActiveMount += Time.deltaTime;
+    }
+    public void IncreateMount()
+    {
+        playerActiveMount++;
+    }
+
+    public void ResetMount()
+    {
+        playerActiveMount = 0;
+    }
+
+
 
     public bool CheckCondition()
     {
@@ -61,6 +85,17 @@ public class TutorialCondition{
             // 2. 이름으로 레이 발사 , 성공시 true.
             if (pointToLocation.FindObject(INFINIFY_DISTANCE, targetLayerName, SpringArmObject.GetInstance().armCamera) != null)
                 return true;
+        }
+
+        if (tutorialConditionType == EnumTutorialCondition.USEACTIVE)
+        {
+
+            // 해당스킬사용했는지?
+            if (activeType == EnumActive.SPEEDRUN)
+            {
+                if (activeMount <= playerActiveMount)
+                    return true;
+            }
 
         }
 

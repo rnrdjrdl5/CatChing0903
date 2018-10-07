@@ -26,7 +26,6 @@ public class ObjectFadeWait : Behaviour{
            
             if (fadeType == FadeType.FADEIN)
             {
-                Debug.Log("!");
                 TargetObject.transform.localScale = Vector3.one * (NowTime / EmoticonFadeInOut);
                 if (NowTime >= EmoticonFadeInOut)
                 {
@@ -46,7 +45,6 @@ public class ObjectFadeWait : Behaviour{
 
             else if (fadeType == FadeType.FADEOUT)
             {
-                Debug.Log("!###");
                 TargetObject.transform.localScale = Vector3.one - Vector3.one * (NowTime / EmoticonFadeInOut);
 
                 if (NowTime >= EmoticonFadeInOut)

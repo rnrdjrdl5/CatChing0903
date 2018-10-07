@@ -6,6 +6,7 @@ public class NormalConditionOption : DefaultSkillConditionOption {
     public override bool CheckCondition()
     {
         {
+            if (defaultSkill.GetphotonView() == null) return false;
             if (defaultSkill.GetphotonView().isMine)
             {
                 // 2. 키가 눌린 경우

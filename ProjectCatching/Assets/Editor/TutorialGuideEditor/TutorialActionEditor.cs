@@ -46,8 +46,17 @@ public partial class TutorialGuideEditor
         ("이모티콘 AI",
         nowAction.tutorialAIType);
 
+        // 1-1 대상을 토대로 설정
+        int tutorialAIType = (int)nowAction.tutorialAIType;
+
+        // 1-2 대상의 오브젝트 선정
+        if (tutorialAIType <= tutorialAI.AI.Length - 1)
+        {
+            nowAction.aIObject = tutorialAI.AI[tutorialAIType];
+        }
+
         //2. 어떤이모티콘
-        nowAction.emoticonType = (TutorialAction.EnumEmoticon)EditorGUILayout.EnumPopup
+            nowAction.emoticonType = (TutorialAction.EnumEmoticon)EditorGUILayout.EnumPopup
         ("이모티콘 종류",
         nowAction.emoticonType);
     }

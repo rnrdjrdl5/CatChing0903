@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -343,6 +343,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 137176444494856828, guid: f116218cfea565d47825b05afe35ae5b,
+        type: 2}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 19
+      objectReference: {fileID: 0}
     - target: {fileID: 4019617709335196, guid: f116218cfea565d47825b05afe35ae5b, type: 2}
       propertyPath: m_LocalPosition.x
       value: -3.61
@@ -556,6 +561,7 @@ GameObject:
   - component: {fileID: 284804411}
   - component: {fileID: 284804413}
   - component: {fileID: 284804414}
+  - component: {fileID: 284804415}
   m_Layer: 0
   m_Name: TutorialGuide
   m_TagString: Untagged
@@ -577,25 +583,73 @@ MonoBehaviour:
   mouseTutorialElements:
   - tutorialConditions:
     - tutorialPlaceType: 0
-      tutorialConditionType: 2
+      tutorialConditionType: 1
       tutorialPlace: {fileID: 1243653099}
       checkTutorialPlace: {fileID: 1243653101}
       onMouseType: 0
+      activeType: 0
+      activeMount: 2.5
+      playerActiveMount: 0
     maxTutorialCondition: 1
     tutorialActions:
-    - tutorialActionType: 3
-      messageText: "\uC131\uACF5"
+    - tutorialActionType: 0
+      messageText: "\uD1A0\uB9C8\uD1A0\uC5D0\uAC8C \uD0C0\uAC9F\uD305\uD574\uBCF4\uC138\uC694."
       messageSizeType: 0
       messageObject: {fileID: 0}
       messageImageScript: {fileID: 0}
       waitTime: 0
       tutorialAIType: 0
+      aIObject: {fileID: 1512225562}
       emoticonType: 0
     maxTutorialAction: 1
-  maxMouseTutorialCount: 1
+  - tutorialConditions:
+    - tutorialPlaceType: 0
+      tutorialConditionType: 2
+      tutorialPlace: {fileID: 1243653099}
+      checkTutorialPlace: {fileID: 1243653101}
+      onMouseType: 0
+      activeType: 0
+      activeMount: 0
+      playerActiveMount: 0
+    maxTutorialCondition: 1
+    tutorialActions:
+    - tutorialActionType: 0
+      messageText: "\uC798\uD588\uC5B4\uC694.\n\uB2E4\uC74C\uC740 \uB2EC\uB9AC\uAE30\uB97C
+        3\uCD08\uB3D9\uC548\n\uC720\uC9C0\uD558\uC138\uC694."
+      messageSizeType: 0
+      messageObject: {fileID: 0}
+      messageImageScript: {fileID: 0}
+      waitTime: 0
+      tutorialAIType: 0
+      aIObject: {fileID: 0}
+      emoticonType: 0
+    maxTutorialAction: 1
+  - tutorialConditions:
+    - tutorialPlaceType: 0
+      tutorialConditionType: 3
+      tutorialPlace: {fileID: 1243653099}
+      checkTutorialPlace: {fileID: 1243653101}
+      onMouseType: 0
+      activeType: 0
+      activeMount: 3
+      playerActiveMount: 0
+    maxTutorialCondition: 1
+    tutorialActions:
+    - tutorialActionType: 0
+      messageText: "\uC644\uBCBD\uD574\uC694."
+      messageSizeType: 0
+      messageObject: {fileID: 0}
+      messageImageScript: {fileID: 0}
+      waitTime: 0
+      tutorialAIType: 0
+      aIObject: {fileID: 0}
+      emoticonType: 0
+    maxTutorialAction: 1
+  maxMouseTutorialCount: 3
   catTutorialElements: []
   maxCatTutorialCount: 0
   tutorialPlayerType: 0
+  playerObject: {fileID: 0}
   messageObject: {fileID: 0}
 --- !u!4 &284804412
 Transform:
@@ -643,8 +697,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf431e88ce7c4e46be9b7c880a2b2f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialAI:
+  AI:
   - {fileID: 1512225562}
+--- !u!114 &284804415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 284804410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 11
+  instantiationId: 11
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &449021428
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,12 +1039,12 @@ Prefab:
     - target: {fileID: 224161418520299384, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 447.68488
+      value: 461.18488
       objectReference: {fileID: 0}
     - target: {fileID: 224161418520299384, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 250.04274
+      value: 257.54276
       objectReference: {fileID: 0}
     - target: {fileID: 1309746247497648, guid: 13f8e56a92fb46144835ec42c779aebf, type: 2}
       propertyPath: m_IsActive
@@ -1508,8 +1588,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1410851051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 447, y: 251.5, z: 0}
-  m_LocalScale: {x: 0.465625, y: 0.465625, z: 0.465625}
+  m_LocalPosition: {x: 460.5, y: 259, z: 0}
+  m_LocalScale: {x: 0.4796875, y: 0.4796875, z: 0.4796875}
   m_Children:
   - {fileID: 269368074}
   m_Father: {fileID: 0}
@@ -1525,6 +1605,17 @@ GameObject:
   m_PrefabParentObject: {fileID: 1847299612799350, guid: f116218cfea565d47825b05afe35ae5b,
     type: 2}
   m_PrefabInternal: {fileID: 184465736}
+--- !u!114 &1512225563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1512225562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9931067c32589434ab8ffa3013eca04c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1665347139
 GameObject:
   m_ObjectHideFlags: 0

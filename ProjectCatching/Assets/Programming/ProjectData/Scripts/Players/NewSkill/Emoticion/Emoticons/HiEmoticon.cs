@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HiEmoticon : ShowEmoticon {
 
+
+
     protected override void Awake()
     {
         base.Awake();
@@ -17,6 +19,7 @@ public class HiEmoticon : ShowEmoticon {
     {
         base.UseSkill();
         photonView.RPC("RPCHiEmoticon", PhotonTargets.All);
+        
     }
 
     [PunRPC]

@@ -21,12 +21,15 @@ public class TutorialAction{
     // 대기시간
     public float waitTime;
 
+
     // 타겟
     public enum EnumTutorialAI { TOMATO };
     public EnumTutorialAI tutorialAIType;
+    public GameObject aIObject;
+
 
     // 이모티콘 
-    public enum EnumEmoticon { HI};
+    public enum EnumEmoticon { ANGRY, HAPPY, HI, MERONG, SAD };
     public EnumEmoticon emoticonType;
 
     public float UseAction()
@@ -49,13 +52,17 @@ public class TutorialAction{
                 break;
 
             case EnumTutorialAction.EMOTION:
-                // 1. 타겟의 스킬을 사용.
-                
+                UseEmotion();
                 break;
 
         }
 
         return returnTime;
+    }
+
+    void UseEmotion()
+    {
+       aIObject.GetComponent<AIEmotions>().UseEmotion((int)emoticonType);
     }
 
 

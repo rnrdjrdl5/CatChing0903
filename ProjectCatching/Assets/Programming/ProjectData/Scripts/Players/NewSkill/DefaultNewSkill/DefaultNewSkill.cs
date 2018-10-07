@@ -65,7 +65,7 @@ public class DefaultNewSkill : MonoBehaviour {
 
 
 
-
+    public delegate void DeleSkillEvent_No();
 
     virtual protected void Awake()
     {
@@ -102,8 +102,8 @@ public class DefaultNewSkill : MonoBehaviour {
 
     void SettingUIEvent()
     {
-        if (!photonView.isMine)
-            return;
+        if (photonView == null) return;
+        if (!photonView.isMine) return;
 
             // 이미지 설정
             switch (InputKey.SkillKeyType)

@@ -10,7 +10,7 @@ public class TutorialGuide : MonoBehaviour {
     public TutorialElement[] catTutorialElements;
     public int maxCatTutorialCount;
 
-
+    
 
 
     private int nowTutorialCount;
@@ -18,7 +18,7 @@ public class TutorialGuide : MonoBehaviour {
     public enum EunmTutorialPlayer { CAT, MOUSE };
 
     public EunmTutorialPlayer tutorialPlayerType;
-
+    public GameObject playerObject;
 
     // 메세지 오브젝트, 스크립트
     public GameObject messageObject;
@@ -40,6 +40,8 @@ public class TutorialGuide : MonoBehaviour {
 
     // 레이캐스트 유틸리티
     private PointToLocation pointToLocation;
+
+
 
 
     private void Awake()

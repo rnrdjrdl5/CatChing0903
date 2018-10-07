@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class TutorialAI : MonoBehaviour {
 
-    public GameObject[] tutorialAI;
+    public GameObject[] AI;
 }

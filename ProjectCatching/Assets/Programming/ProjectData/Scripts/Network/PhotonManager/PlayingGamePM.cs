@@ -184,10 +184,59 @@ public partial class PhotonManager
 
         TutorialGuide tg = go.GetComponent<TutorialGuide>();
         if (tg == null) return;
-        Debug.Log("수행");
+
+
+        tg.playerObject = CurrentPlayer;
+        SetTutorialGuide(tg);
 
         tg.StartTutorial();
+    }
 
+    public void SetTutorialGuide(TutorialGuide tg)
+    {
+        // 1. 스킬에 필요한 데이터와 플레이어의 데이터를 연결시킨다.
+
+        // 종류찾기.
+        int tutorialElementCount = tg.mouseTutorialElements.Length;
+        for (int i = 0; i < tutorialElementCount; i++)
+        {
+            TutorialElement tutorialElement = tg.mouseTutorialElements[i];
+
+            int tutorialCdtCount = tutorialElement.tutorialConditions.Length;
+            for (int tcc = 0; tcc < tutorialCdtCount; tcc++)
+            {
+                TutorialCondition tutorialCondition = tutorialElement.tutorialConditions[tcc];
+
+                //액션 셋팅
+                SetCondition(tutorialCondition);
+            }
+
+            int tutorialAcCondition = tutorialElement.tutorialActions.Length;
+            for (int tac = 0; tac < tutorialAcCondition; tac++)
+            {
+                TutorialAction tutorialAction = tutorialElement.tutorialActions[tac];
+
+                //조건 셋팅
+                SetAction(tutorialAction);
+
+            }
+        }
+    }
+
+    public void SetCondition(TutorialCondition tutorialCondition)
+    {
+        if (tutorialCondition.activeType == TutorialCondition.EnumActive.SPEEDRUN)
+        {
+            NewSpeedRun newSpeedRun = CurrentPlayer.GetComponent<NewSpeedRun>();
+            newSpeedRun.EventUseCtnSkill += tutorialCondition.IncreateTime;
+
+            newSpeedRun.EventExitCtnSkill += tutorialCondition.ResetMount;
+        }
         
+    }
+
+    public void SetAction(TutorialAction tutorialAction)
+    {
+
     }
 }

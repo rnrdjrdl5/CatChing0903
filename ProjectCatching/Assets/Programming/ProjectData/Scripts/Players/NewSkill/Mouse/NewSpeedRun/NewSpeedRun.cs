@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class NewSpeedRun : DefaultNewSkill {
 
-
-
-    
-
     /**** public ****/
 
     public float PlayerRunSpeed;                    // 플레이어 가속 속도
@@ -42,6 +38,10 @@ public class NewSpeedRun : DefaultNewSkill {
     public void SetCheckTime(float CT) { CheckTime = CT; }
 
 
+    // 스킬 사용 이벤트들
+    public event DeleSkillEvent_No EventUseCtnSkill;
+
+    public event DeleSkillEvent_No EventExitCtnSkill;
 
     // 이벤트를 다른걸로 받음.
     protected override void SetDrawCoolTimeUIEvent()
@@ -131,7 +131,6 @@ public class NewSpeedRun : DefaultNewSkill {
     public override bool CheckCtnState()
     {
 
-
         // 이동 or 대쉬
         // 
         if ((playerState.EqualPlayerCondition(PlayerState.ConditionEnum.RUN) ||
@@ -150,6 +149,8 @@ public class NewSpeedRun : DefaultNewSkill {
 
     public override void UseCtnSkill()
     {
+        if(EventUseCtnSkill!= null) EventUseCtnSkill();
+
         if (animator.GetFloat("DirectionX") == 0 &&
             animator.GetFloat("DirectionY") == 0)
         {
@@ -182,6 +183,9 @@ public class NewSpeedRun : DefaultNewSkill {
 
         // 4. 지속시간 초기화
         CheckTime = 0.0f;
+
+        // 5. 스킬 사용 종료 이벤트
+        if (EventExitCtnSkill != null) EventExitCtnSkill();
 
     }
 

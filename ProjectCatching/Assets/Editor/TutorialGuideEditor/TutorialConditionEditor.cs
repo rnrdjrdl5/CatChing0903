@@ -16,6 +16,9 @@ public partial class TutorialGuideEditor
             case TutorialCondition.EnumTutorialCondition.ONMOUSE:
                 OnMouseInspector(nowCondition);
                 break;
+            case TutorialCondition.EnumTutorialCondition.USEACTIVE:
+                UseActoinInspector(nowCondition);
+                break;
         }
     }
 
@@ -50,6 +53,16 @@ public partial class TutorialGuideEditor
         nowCondition.onMouseType = (TutorialCondition.EnumOnMouse)EditorGUILayout.EnumPopup
         ("마우스 대상",
         nowCondition.onMouseType);
+    }
+
+    void UseActoinInspector(TutorialCondition nowCondition)
+    {
+        nowCondition.activeType = (TutorialCondition.EnumActive)EditorGUILayout.EnumPopup
+        ("액티브 사용/횟수",
+        nowCondition.activeType);
+
+        nowCondition.activeMount = 
+            EditorGUILayout.FloatField("사용 횟수", nowCondition.activeMount);
     }
 }
 
