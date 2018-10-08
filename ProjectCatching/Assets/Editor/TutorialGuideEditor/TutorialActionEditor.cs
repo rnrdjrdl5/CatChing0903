@@ -19,6 +19,9 @@ public partial class TutorialGuideEditor
             case TutorialAction.EnumTutorialAction.EMOTION:
                 EmotionInspector(nowAction);
                 break;
+            case TutorialAction.EnumTutorialAction.DRAW_IMAGE:
+                DrawImage(nowAction);
+                break;
         }
     }
 
@@ -59,5 +62,13 @@ public partial class TutorialGuideEditor
             nowAction.emoticonType = (TutorialAction.EnumEmoticon)EditorGUILayout.EnumPopup
         ("이모티콘 종류",
         nowAction.emoticonType);
+    }
+
+    void DrawImage(TutorialAction nowAction)
+    {
+        // 1. 어떤 이미지를 보여줄건지 선택하고.
+        
+
+        // 2. 어디 좌표에 이미지를 보여줄건지 선택한다.
     }
 }

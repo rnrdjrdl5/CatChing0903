@@ -225,14 +225,25 @@ public partial class PhotonManager
 
     public void SetCondition(TutorialCondition tutorialCondition)
     {
-        if (tutorialCondition.activeType == TutorialCondition.EnumActive.SPEEDRUN)
+        if (tutorialCondition.tutorialConditionType == TutorialCondition.EnumTutorialCondition.USEACTIVE)
         {
-            NewSpeedRun newSpeedRun = CurrentPlayer.GetComponent<NewSpeedRun>();
-            newSpeedRun.EventUseCtnSkill += tutorialCondition.IncreateTime;
+            if (tutorialCondition.activeType == TutorialCondition.EnumActive.SPEEDRUN)
+            {
+                NewSpeedRun newSpeedRun = CurrentPlayer.GetComponent<NewSpeedRun>();
+                newSpeedRun.EventUseCtnSkill += tutorialCondition.IncreateTime;
 
-            newSpeedRun.EventExitCtnSkill += tutorialCondition.ResetMount;
+                newSpeedRun.EventExitCtnSkill += tutorialCondition.ResetMount;
+            }
         }
-        
+
+        if (tutorialCondition.tutorialConditionType == TutorialCondition.EnumTutorialCondition.USEINTERACTIVE)
+        {
+            NewInteractionSkill newInteractionSkill = CurrentPlayer.GetComponent<NewInteractionSkill>();
+            tutorialCondition.intersMount = new int[tutorialCondition.MAX_INTERS];
+
+            newInteractionSkill.EventInteractive += tutorialCondition.IncreaseInter;
+        }
+
     }
 
     public void SetAction(TutorialAction tutorialAction)

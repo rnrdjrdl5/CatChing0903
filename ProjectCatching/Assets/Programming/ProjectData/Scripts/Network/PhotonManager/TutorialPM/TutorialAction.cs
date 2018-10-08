@@ -6,7 +6,7 @@ using UnityEngine;
 public class TutorialAction{
 
     // 액션타입.
-    public enum EnumTutorialAction { MESSAGE , WAIT, DEBUG, EMOTION}
+    public enum EnumTutorialAction { MESSAGE , WAIT, DEBUG, EMOTION , DRAW_IMAGE}
     public EnumTutorialAction tutorialActionType;
 
     // 텍스트용

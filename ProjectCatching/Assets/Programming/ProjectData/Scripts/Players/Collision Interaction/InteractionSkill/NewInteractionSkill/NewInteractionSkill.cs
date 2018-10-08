@@ -388,8 +388,14 @@ public class NewInteractionSkill : Photon.MonoBehaviour, IPunObservable {
     }
 
 
+    public delegate void DeleInteractive(int data);
+    public event DeleInteractive EventInteractive;
+
     private void CallAction()
     {
+        
+        EventInteractive((int)interactiveState.interactiveObjectType);
+
         IsUseAction = true;
 
         // 물리 일 경우 날라갈 위치의 노말벡터 전달

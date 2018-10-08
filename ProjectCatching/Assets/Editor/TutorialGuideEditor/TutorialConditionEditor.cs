@@ -17,7 +17,10 @@ public partial class TutorialGuideEditor
                 OnMouseInspector(nowCondition);
                 break;
             case TutorialCondition.EnumTutorialCondition.USEACTIVE:
-                UseActoinInspector(nowCondition);
+                UseActionInspector(nowCondition);
+                break;
+            case TutorialCondition.EnumTutorialCondition.USEINTERACTIVE:
+                UseInteractiveInspector(nowCondition);
                 break;
         }
     }
@@ -55,7 +58,7 @@ public partial class TutorialGuideEditor
         nowCondition.onMouseType);
     }
 
-    void UseActoinInspector(TutorialCondition nowCondition)
+    void UseActionInspector(TutorialCondition nowCondition)
     {
         nowCondition.activeType = (TutorialCondition.EnumActive)EditorGUILayout.EnumPopup
         ("액티브 사용/횟수",
@@ -63,6 +66,16 @@ public partial class TutorialGuideEditor
 
         nowCondition.activeMount = 
             EditorGUILayout.FloatField("사용 횟수", nowCondition.activeMount);
+    }
+
+    void UseInteractiveInspector(TutorialCondition nowCondition)
+    {
+        nowCondition.interactiveObjectType = (InteractiveState.EnumInteractiveObject)EditorGUILayout.EnumPopup
+            ("상호작용 타입",
+            nowCondition.interactiveObjectType);
+
+        nowCondition.interactiveMount =
+            EditorGUILayout.IntField("사용횟수", nowCondition.interactiveMount);
     }
 }
 

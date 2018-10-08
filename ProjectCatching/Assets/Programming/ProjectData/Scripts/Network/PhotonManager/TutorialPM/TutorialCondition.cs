@@ -18,7 +18,9 @@ public class TutorialCondition{
 
 
     // 조건
-    public enum EnumTutorialCondition { PLACE, ALWAYS, ONMOUSE , USEACTIVE};
+    public enum EnumTutorialCondition {
+        PLACE, ALWAYS, ONMOUSE , USEACTIVE, USEINTERACTIVE
+    };
     public EnumTutorialCondition tutorialConditionType;
 
     // 이동 위치
@@ -33,7 +35,7 @@ public class TutorialCondition{
     public EnumOnMouse onMouseType;
 
     // 액티브 사용 시
-    public enum EnumActive { SPEEDRUN };
+    public enum EnumActive { SPEEDRUN};
     public EnumActive activeType;
     public float activeMount;
 
@@ -53,6 +55,17 @@ public class TutorialCondition{
         playerActiveMount = 0;
     }
 
+
+    // 상호작용 설정
+    public InteractiveState.EnumInteractiveObject interactiveObjectType;
+    public int interactiveMount;
+
+    public int[] intersMount;           // 각 상호작용 마다 갯수 파악 용
+    public int MAX_INTERS = 100;        // 상호작용의 최대개수
+    public void IncreaseInter(int data)
+    {
+        intersMount[data]++;
+    }
 
 
     public bool CheckCondition()
@@ -98,6 +111,13 @@ public class TutorialCondition{
             }
 
         }
+
+        if (tutorialConditionType == EnumTutorialCondition.USEINTERACTIVE)
+        {
+            if (intersMount[(int)interactiveObjectType] >= interactiveMount)
+                return true;
+        }
+
 
             return false;
     }
