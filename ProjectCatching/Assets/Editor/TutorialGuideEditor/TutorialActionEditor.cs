@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -67,8 +67,19 @@ public partial class TutorialGuideEditor
     void DrawImage(TutorialAction nowAction)
     {
         // 1. 어떤 이미지를 보여줄건지 선택하고.
-        
+        nowAction.imageObject = EditorGUILayout.ObjectField("이미지 선택",
+            nowAction.imageObject, typeof(GameObject), false) as GameObject;
+
 
         // 2. 어디 좌표에 이미지를 보여줄건지 선택한다.
+        nowAction.imageXPosition = EditorGUILayout.FloatField("X축 선택",
+            nowAction.imageXPosition);
+        nowAction.imageYPosition = EditorGUILayout.FloatField("Y축 선택",
+            nowAction.imageYPosition);
+
+        
+
+
+
     }
 }

@@ -248,6 +248,6 @@ public partial class PhotonManager
 
     public void SetAction(TutorialAction tutorialAction)
     {
-
+        
     }
 }

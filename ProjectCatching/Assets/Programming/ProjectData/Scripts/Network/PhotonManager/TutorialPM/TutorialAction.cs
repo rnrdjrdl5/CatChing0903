@@ -5,8 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class TutorialAction{
 
+    // 기본 정보
+    public GameObject tutorialCanvas;
+
+
     // 액션타입.
-    public enum EnumTutorialAction { MESSAGE , WAIT, DEBUG, EMOTION , DRAW_IMAGE}
+    public enum EnumTutorialAction { MESSAGE, WAIT, DEBUG, EMOTION, DRAW_IMAGE }
     public EnumTutorialAction tutorialActionType;
 
     // 텍스트용
@@ -28,9 +32,16 @@ public class TutorialAction{
     public GameObject aIObject;
 
 
+
     // 이모티콘 
     public enum EnumEmoticon { ANGRY, HAPPY, HI, MERONG, SAD };
     public EnumEmoticon emoticonType;
+
+
+    // 이미지 생성
+    public GameObject imageObject;
+    public float imageXPosition;
+    public float imageYPosition;
 
     public float UseAction()
     {
@@ -38,7 +49,7 @@ public class TutorialAction{
 
         switch (tutorialActionType)
         {
-            case EnumTutorialAction.DEBUG:      
+            case EnumTutorialAction.DEBUG:
                 Debug.Log("DebugLog");
                 break;
 
@@ -54,6 +65,9 @@ public class TutorialAction{
             case EnumTutorialAction.EMOTION:
                 UseEmotion();
                 break;
+            case EnumTutorialAction.DRAW_IMAGE:
+                DrawImage();
+                break;
 
         }
 
@@ -62,7 +76,17 @@ public class TutorialAction{
 
     void UseEmotion()
     {
-       aIObject.GetComponent<AIEmotions>().UseEmotion((int)emoticonType);
+        aIObject.GetComponent<AIEmotions>().UseEmotion((int)emoticonType);
+    }
+
+    void DrawImage()
+    {
+        Vector3 position = new Vector3(imageXPosition, imageYPosition, 0);
+
+        // 생성할 방법이 필요하다. 그러면?
+        //GameObject go = Instantiate(imageObject, position, Quaternion.identity);
+
+        //go.transform.parent = tutorialCanvas.transform;
     }
 
 

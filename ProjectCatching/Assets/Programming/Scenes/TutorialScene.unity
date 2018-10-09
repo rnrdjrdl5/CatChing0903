@@ -580,42 +580,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a865605d02b9547a590b04be0d92f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialCanvas: {fileID: 0}
   mouseTutorialElements:
   - tutorialConditions:
     - tutorialPlaceType: 0
-      tutorialConditionType: 1
-      tutorialPlace: {fileID: 1243653099}
-      checkTutorialPlace: {fileID: 1243653101}
-      onMouseType: 0
-      activeType: 0
-      activeMount: 2.5
-      playerActiveMount: 0
-    maxTutorialCondition: 1
-    tutorialActions:
-    - tutorialActionType: 0
-      messageText: "\uD1A0\uB9C8\uD1A0\uC5D0\uAC8C \uD0C0\uAC9F\uD305\uD574\uBCF4\uC138\uC694."
-      messageSizeType: 0
-      messageObject: {fileID: 0}
-      messageImageScript: {fileID: 0}
-      waitTime: 0
-      tutorialAIType: 0
-      aIObject: {fileID: 1512225562}
-      emoticonType: 0
-    maxTutorialAction: 1
-  - tutorialConditions:
-    - tutorialPlaceType: 0
-      tutorialConditionType: 2
+      tutorialConditionType: 0
       tutorialPlace: {fileID: 1243653099}
       checkTutorialPlace: {fileID: 1243653101}
       onMouseType: 0
       activeType: 0
       activeMount: 0
       playerActiveMount: 0
+      interactiveObjectType: 0
+      interactiveMount: 0
+      intersMount: 
+      MAX_INTERS: 100
     maxTutorialCondition: 1
     tutorialActions:
-    - tutorialActionType: 0
-      messageText: "\uC798\uD588\uC5B4\uC694.\n\uB2E4\uC74C\uC740 \uB2EC\uB9AC\uAE30\uB97C
-        3\uCD08\uB3D9\uC548\n\uC720\uC9C0\uD558\uC138\uC694."
+    - tutorialCanvas: {fileID: 0}
+      tutorialActionType: 0
+      messageText: 
       messageSizeType: 0
       messageObject: {fileID: 0}
       messageImageScript: {fileID: 0}
@@ -623,29 +607,11 @@ MonoBehaviour:
       tutorialAIType: 0
       aIObject: {fileID: 0}
       emoticonType: 0
+      imageObject: {fileID: 0}
+      imageXPosition: 0
+      imageYPosition: 0
     maxTutorialAction: 1
-  - tutorialConditions:
-    - tutorialPlaceType: 0
-      tutorialConditionType: 3
-      tutorialPlace: {fileID: 1243653099}
-      checkTutorialPlace: {fileID: 1243653101}
-      onMouseType: 0
-      activeType: 0
-      activeMount: 3
-      playerActiveMount: 0
-    maxTutorialCondition: 1
-    tutorialActions:
-    - tutorialActionType: 0
-      messageText: "\uC644\uBCBD\uD574\uC694."
-      messageSizeType: 0
-      messageObject: {fileID: 0}
-      messageImageScript: {fileID: 0}
-      waitTime: 0
-      tutorialAIType: 0
-      aIObject: {fileID: 0}
-      emoticonType: 0
-    maxTutorialAction: 1
-  maxMouseTutorialCount: 3
+  maxMouseTutorialCount: 1
   catTutorialElements: []
   maxCatTutorialCount: 0
   tutorialPlayerType: 0
@@ -879,7 +845,7 @@ Prefab:
     - target: {fileID: 224951943951134882, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.2540894
+      value: 3.2540283
       objectReference: {fileID: 0}
     - target: {fileID: 224561863166087208, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
@@ -899,7 +865,7 @@ Prefab:
     - target: {fileID: 224824886700119104, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.2540894
+      value: 3.2540283
       objectReference: {fileID: 0}
     - target: {fileID: 224140245465577816, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
@@ -979,7 +945,7 @@ Prefab:
     - target: {fileID: 224175936259934118, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.2540894
+      value: 3.2540283
       objectReference: {fileID: 0}
     - target: {fileID: 224886175744608136, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
@@ -1039,12 +1005,12 @@ Prefab:
     - target: {fileID: 224161418520299384, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 461.18488
+      value: 346.18488
       objectReference: {fileID: 0}
     - target: {fileID: 224161418520299384, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 257.54276
+      value: 193.04274
       objectReference: {fileID: 0}
     - target: {fileID: 1309746247497648, guid: 13f8e56a92fb46144835ec42c779aebf, type: 2}
       propertyPath: m_IsActive
@@ -1518,7 +1484,7 @@ GameObject:
   - component: {fileID: 1410851053}
   - component: {fileID: 1410851052}
   m_Layer: 5
-  m_Name: TextCanvas
+  m_Name: TutorialCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1588,8 +1554,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1410851051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 460.5, y: 259, z: 0}
-  m_LocalScale: {x: 0.4796875, y: 0.4796875, z: 0.4796875}
+  m_LocalPosition: {x: 345.5, y: 194.5, z: 0}
+  m_LocalScale: {x: 0.35989583, y: 0.35989583, z: 0.35989583}
   m_Children:
   - {fileID: 269368074}
   m_Father: {fileID: 0}

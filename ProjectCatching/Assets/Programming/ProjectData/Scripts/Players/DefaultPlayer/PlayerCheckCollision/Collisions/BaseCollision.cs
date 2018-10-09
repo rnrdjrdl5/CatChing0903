@@ -61,7 +61,6 @@ public class BaseCollision : Photon.PunBehaviour{
     public void UseCollision(Collider other)
     {
 
-        
         // collisionObject 받아오기
         collisionObject = other.gameObject.GetComponent<CollisionObject>();
 

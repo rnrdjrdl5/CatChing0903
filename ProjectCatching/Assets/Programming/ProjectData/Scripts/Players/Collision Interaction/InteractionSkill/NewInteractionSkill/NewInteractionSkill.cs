@@ -394,7 +394,7 @@ public class NewInteractionSkill : Photon.MonoBehaviour, IPunObservable {
     private void CallAction()
     {
         
-        EventInteractive((int)interactiveState.interactiveObjectType);
+        if(EventInteractive != null) EventInteractive((int)interactiveState.interactiveObjectType);
 
         IsUseAction = true;
 

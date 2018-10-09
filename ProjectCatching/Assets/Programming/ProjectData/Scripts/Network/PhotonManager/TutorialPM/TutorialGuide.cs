@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class TutorialGuide : MonoBehaviour {
 
+
+    // 기본설정
+    public GameObject tutorialCanvas;
+
+
     public TutorialElement[] mouseTutorialElements;
     public int maxMouseTutorialCount;
 
     public TutorialElement[] catTutorialElements;
     public int maxCatTutorialCount;
 
-    
 
 
     private int nowTutorialCount;
@@ -24,12 +28,15 @@ public class TutorialGuide : MonoBehaviour {
     public GameObject messageObject;
     MessageImageScript messageImageScript;
 
+   
+
+
     void InitMessageData()
     {
-        GameObject tco = GameObject.Find("TextCanvas");
+        tutorialCanvas = GameObject.Find("TutorialCanvas");
 
-        if (tco == null) return;
-        Transform tr = tco.transform.Find("TutorialMsgImage");
+        if (tutorialCanvas == null) return;
+        Transform tr = tutorialCanvas.transform.Find("TutorialMsgImage");
 
         if (tr == null) return;
         messageObject = tr.gameObject;
@@ -53,6 +60,8 @@ public class TutorialGuide : MonoBehaviour {
 
 
     // 하위 속성들 설정
+    // 수정생각하기
+    // 모든 Elements에게 데이터를 주지 말고 if문을 써서 하는게 나을 수도 있다.
     void SettingElements()
     {
         int nowCount = mouseTutorialElements.Length;
@@ -63,11 +72,17 @@ public class TutorialGuide : MonoBehaviour {
             // 액션 속성들 설정
             int actionCount = mouseTutorialElements[i].tutorialActions.Length;
 
+
+           // 수정생각하기
+            // 모든 Elements에게 데이터를 주지 말고 if문을 써서 하는게 나을 수도 있다.
             for (int mte = 0; mte < actionCount; mte++) {
 
 
                 mouseTutorialElements[i].tutorialActions[mte].messageImageScript = messageImageScript;
                 mouseTutorialElements[i].tutorialActions[mte].messageObject = messageObject;
+                mouseTutorialElements[i].tutorialActions[mte].tutorialCanvas = tutorialCanvas;
+
+
             }
 
             // 조건 설정들 설정
@@ -77,6 +92,7 @@ public class TutorialGuide : MonoBehaviour {
             {
 
                 mouseTutorialElements[i].tutorialConditions[mtc].pointToLocation = pointToLocation;
+                
             }
 
 
