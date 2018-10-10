@@ -225,6 +225,8 @@ public partial class PhotonManager
 
     public void SetCondition(TutorialCondition tutorialCondition)
     {
+        tutorialCondition.playerObject = CurrentPlayer;
+
         if (tutorialCondition.tutorialConditionType == TutorialCondition.EnumTutorialCondition.USEACTIVE)
         {
             if (tutorialCondition.activeType == TutorialCondition.EnumActive.SPEEDRUN)
@@ -248,6 +250,6 @@ public partial class PhotonManager
 
     public void SetAction(TutorialAction tutorialAction)
     {
-        
+        tutorialAction.playerObject = CurrentPlayer;
     }
 }

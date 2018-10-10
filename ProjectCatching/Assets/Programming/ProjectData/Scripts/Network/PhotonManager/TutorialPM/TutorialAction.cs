@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class TutorialAction{
+public class TutorialAction {
 
     // 기본 정보
     public GameObject tutorialCanvas;
-
+    public GameObject playerObject;
 
     // 액션타입.
-    public enum EnumTutorialAction { MESSAGE, WAIT, DEBUG, EMOTION, DRAW_IMAGE }
+    public enum EnumTutorialAction { MESSAGE, WAIT, DEBUG, EMOTION, DRAW_IMAGE, PRACTICE_SKILL, RESET_PRACTICE , RESCUE}
     public EnumTutorialAction tutorialActionType;
 
     // 텍스트용
@@ -43,6 +43,11 @@ public class TutorialAction{
     public float imageXPosition;
     public float imageYPosition;
 
+    // 스킬 연습
+    public enum EnumPracticeSkill { MOUSE_SPREAD, NINJA_HIDE }
+    public EnumPracticeSkill PracticeSkillType;
+
+
     public float UseAction()
     {
         float returnTime = 0f;
@@ -65,14 +70,29 @@ public class TutorialAction{
             case EnumTutorialAction.EMOTION:
                 UseEmotion();
                 break;
+
             case EnumTutorialAction.DRAW_IMAGE:
                 DrawImage();
+                break;
+
+            case EnumTutorialAction.PRACTICE_SKILL:
+                PracticeSkill();
+                break;
+
+            case EnumTutorialAction.RESET_PRACTICE:
+                ResetSkill();
+                break;
+
+            case EnumTutorialAction.RESCUE:
+                Rescue();
                 break;
 
         }
 
         return returnTime;
     }
+
+
 
     void UseEmotion()
     {
@@ -88,6 +108,42 @@ public class TutorialAction{
 
         //go.transform.parent = tutorialCanvas.transform;
     }
+
+    void PracticeSkill()
+    {
+        switch (PracticeSkillType)
+        {
+            case EnumPracticeSkill.MOUSE_SPREAD:
+                playerObject.GetComponent<MouseSpread>().coolDown.PracticeCoolDown();
+                break;
+            case EnumPracticeSkill.NINJA_HIDE:
+                playerObject.GetComponent<NinjaHide>().coolDown.PracticeCoolDown();
+                break;
+
+        }
+    }
+
+    void ResetSkill()
+    {
+        switch (PracticeSkillType)
+        {
+            case EnumPracticeSkill.MOUSE_SPREAD:
+                playerObject.GetComponent<MouseSpread>().coolDown.ResetCoolDown();
+                break;
+            case EnumPracticeSkill.NINJA_HIDE:
+                playerObject.GetComponent<NinjaHide>().coolDown.ResetCoolDown();
+                break;
+        }
+    }
+
+    void Rescue()
+    {
+        
+    }
+
+
+
+
 
 
 }

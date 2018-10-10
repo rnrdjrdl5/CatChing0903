@@ -30,24 +30,6 @@ public class TutorialElement{
     }
 
 
-    public void UseAction()
-    {
 
-        // 카운트만큼 action 사용
-        int nowCount = tutorialActions.Length;
-
-        for (int i = 0; i < nowCount; i++)
-        {
-
-            // 1. 액션 수행
-            float waitTime = tutorialActions[i].UseAction();
-            float tempTime = 0.0f;
-            // 대기시간이 지날 떄 까지 대기
-            while (true)
-            {
-                if (tempTime >= waitTime) break;
-                else tempTime += Time.deltaTime;
-            }
-        }
-    }
+    
 }

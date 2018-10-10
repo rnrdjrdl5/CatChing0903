@@ -76,6 +76,9 @@ public class DefaultNewSkill : MonoBehaviour {
         SettingUIEvent();
 
         coolDown.DecreaseCoolDown();
+       
+        // 저장
+        coolDown.tempMaxCoolDown = coolDown.MaxCoolDown;
 
     }
 

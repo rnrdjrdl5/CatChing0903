@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &71809428
 GameObject:
@@ -378,7 +378,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4019617709335196, guid: f116218cfea565d47825b05afe35ae5b, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847299612799350, guid: f116218cfea565d47825b05afe35ae5b, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f116218cfea565d47825b05afe35ae5b, type: 2}
@@ -420,7 +424,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4809445212263860, guid: dcdb0d34a1cec9c40b92dd583ce048ab, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1366160352340200, guid: dcdb0d34a1cec9c40b92dd583ce048ab, type: 2}
       propertyPath: m_Name
@@ -583,7 +587,89 @@ MonoBehaviour:
   tutorialCanvas: {fileID: 0}
   mouseTutorialElements:
   - tutorialConditions:
-    - tutorialPlaceType: 0
+    - playerObject: {fileID: 0}
+      tutorialPlaceType: 0
+      tutorialConditionType: 1
+      tutorialPlace: {fileID: 1243653099}
+      checkTutorialPlace: {fileID: 1243653101}
+      onMouseType: 0
+      activeType: 0
+      activeMount: 0
+      playerActiveMount: 0
+      interactiveObjectType: 2
+      interactiveMount: 0
+      intersMount: 
+      MAX_INTERS: 100
+    maxTutorialCondition: 1
+    tutorialActions:
+    - tutorialCanvas: {fileID: 0}
+      playerObject: {fileID: 0}
+      tutorialActionType: 3
+      messageText: 
+      messageSizeType: 0
+      messageObject: {fileID: 0}
+      messageImageScript: {fileID: 0}
+      waitTime: 2
+      tutorialAIType: 0
+      aIObject: {fileID: 1512225562}
+      emoticonType: 2
+      imageObject: {fileID: 0}
+      imageXPosition: 0
+      imageYPosition: 0
+      PracticeSkillType: 0
+    - tutorialCanvas: {fileID: 0}
+      playerObject: {fileID: 0}
+      tutorialActionType: 0
+      messageText: "\uB9C8\uC6B0\uC2A4\uB97C \uC870\uC791 \uD574 \n\uC870\uC900\uC810\uC744
+        \uD1A0\uB9C8\uD1A0\uC5D0\uAC8C\n\uC774\uB3D9 \uD574 \uBCF4\uC138\uC694."
+      messageSizeType: 2
+      messageObject: {fileID: 0}
+      messageImageScript: {fileID: 0}
+      waitTime: 0
+      tutorialAIType: 0
+      aIObject: {fileID: 0}
+      emoticonType: 0
+      imageObject: {fileID: 0}
+      imageXPosition: 0
+      imageYPosition: 0
+      PracticeSkillType: 0
+    maxTutorialAction: 2
+  - tutorialConditions:
+    - playerObject: {fileID: 0}
+      tutorialPlaceType: 0
+      tutorialConditionType: 2
+      tutorialPlace: {fileID: 1243653099}
+      checkTutorialPlace: {fileID: 1243653101}
+      onMouseType: 0
+      activeType: 0
+      activeMount: 0
+      playerActiveMount: 0
+      interactiveObjectType: 0
+      interactiveMount: 0
+      intersMount: 
+      MAX_INTERS: 100
+    maxTutorialCondition: 1
+    tutorialActions:
+    - tutorialCanvas: {fileID: 0}
+      playerObject: {fileID: 0}
+      tutorialActionType: 0
+      messageText: "\uC88B\uB124\uC694. \uC774\uBC88\uC5D4 \n\uD1A0\uB9C8\uD1A0\uC5D0\uAC8C
+        \uAC00\uAE4C\uC774 \n\uAC00\uBCF4\uB3C4\uB85D \uD558\uC8E0."
+      messageSizeType: 2
+      messageObject: {fileID: 0}
+      messageImageScript: {fileID: 0}
+      waitTime: 0
+      tutorialAIType: 0
+      aIObject: {fileID: 0}
+      emoticonType: 0
+      imageObject: {fileID: 0}
+      imageXPosition: 0
+      imageYPosition: 0
+      PracticeSkillType: 0
+    maxTutorialAction: 1
+  - tutorialConditions:
+    - playerObject: {fileID: 0}
+      tutorialPlaceType: 0
       tutorialConditionType: 0
       tutorialPlace: {fileID: 1243653099}
       checkTutorialPlace: {fileID: 1243653101}
@@ -598,9 +684,12 @@ MonoBehaviour:
     maxTutorialCondition: 1
     tutorialActions:
     - tutorialCanvas: {fileID: 0}
+      playerObject: {fileID: 0}
       tutorialActionType: 0
-      messageText: 
-      messageSizeType: 0
+      messageText: "Shift\uD0A4\uC640 \uBC29\uD5A5\uD0A4\uB97C \uD568\uAED8 \n\uB204\uB974\uB294
+        \uAC83\uC73C\uB85C \uC880 \uB354 \n\uBE60\uB974\uAC8C \uC774\uB3D9\uD560 \uC218
+        \uC788\uC2B5\uB2C8\uB2E4."
+      messageSizeType: 2
       messageObject: {fileID: 0}
       messageImageScript: {fileID: 0}
       waitTime: 0
@@ -610,8 +699,186 @@ MonoBehaviour:
       imageObject: {fileID: 0}
       imageXPosition: 0
       imageYPosition: 0
+      PracticeSkillType: 0
     maxTutorialAction: 1
-  maxMouseTutorialCount: 1
+  - tutorialConditions:
+    - playerObject: {fileID: 0}
+      tutorialPlaceType: 0
+      tutorialConditionType: 3
+      tutorialPlace: {fileID: 1243653099}
+      checkTutorialPlace: {fileID: 1243653101}
+      onMouseType: 0
+      activeType: 0
+      activeMount: 3
+      playerActiveMount: 0
+      interactiveObjectType: 0
+      interactiveMount: 0
+      intersMount: 
+      MAX_INTERS: 100
+    maxTutorialCondition: 1
+    tutorialActions:
+    - tutorialCanvas: {fileID: 0}
+      playerObject: {fileID: 0}
+      tutorialActionType: 0
+      messageText: "\uB3C4\uB9DD\uC790\uB294 \uD568\uAED8 \uD611\uB825\uD558\uC5EC
+        \n\uB808\uC2A4\uD1A0\uB791\uC744 \uC5C9\uB9DD\uC73C\uB85C \n\uB9CC\uB4E4\uC5B4\uC57C
+        \uD569\uB2C8\uB2E4."
+      messageSizeType: 2
+      messageObject: {fileID: 0}
+      messageImageScript: {fileID: 0}
+      waitTime: 0
+      tutorialAIType: 0
+      aIObject: {fileID: 0}
+      emoticonType: 0
+      imageObject: {fileID: 0}
+      imageXPosition: 0
+      imageYPosition: 0
+      PracticeSkillType: 0
+    - tutorialCanvas: {fileID: 0}
+      playerObject: {fileID: 0}
+      tutorialActionType: 1
+      messageText: 
+      messageSizeType: 0
+      messageObject: {fileID: 0}
+      messageImageScript: {fileID: 0}
+      waitTime: 3
+      tutorialAIType: 0
+      aIObject: {fileID: 0}
+      emoticonType: 0
+      imageObject: {fileID: 0}
+      imageXPosition: 0
+      imageYPosition: 0
+      PracticeSkillType: 0
+    - tutorialCanvas: {fileID: 0}
+      playerObject: {fileID: 0}
+      tutorialActionType: 0
+      messageText: "\uC0C1\uD638\uC791\uC6A9 \uC624\uBE0C\uC81D\uD2B8\uC5D0 \uC811\uADFC
+        \uD574 \n\uC0C1\uD638\uC791\uC6A9 \uD0A4\uB97C \uB204\uB974\uB294 \uAC83\uC73C\uB85C\n\uB808\uC2A4\uD1A0\uB791\uC744
+        \uC5C9\uB9DD\uC73C\uB85C \uB9CC\uB4E4 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+      messageSizeType: 2
+      messageObject: {fileID: 0}
+      messageImageScript: {fileID: 0}
+      waitTime: 0
+      tutorialAIType: 0
+      aIObject: {fileID: 0}
+      emoticonType: 0
+      imageObject: {fileID: 0}
+      imageXPosition: 0
+      imageYPosition: 0
+      PracticeSkillType: 0
+    - tutorialCanvas: {fileID: 0}
+      playerObject: {fileID: 0}
+      tutorialActionType: 1
+      messageText: 
+      messageSizeType: 0
+      messageObject: {fileID: 0}
+      messageImageScript: {fileID: 0}
+      waitTime: 3
+      tutorialAIType: 0
+      aIObject: {fileID: 0}
+      emoticonType: 0
+      imageObject: {fileID: 0}
+      imageXPosition: 0
+      imageYPosition: 0
+      PracticeSkillType: 0
+    - tutorialCanvas: {fileID: 0}
+      playerObject: {fileID: 0}
+      tutorialActionType: 0
+      messageText: "\uD14C\uC774\uBE14, \uC758\uC790\uC5D0 \uC811\uADFC\uD558\uC5EC
+        \n\uC0C1\uD638\uC791\uC6A9\uC744 \uD574 \uBCF4\uC138\uC694."
+      messageSizeType: 2
+      messageObject: {fileID: 0}
+      messageImageScript: {fileID: 0}
+      waitTime: 0
+      tutorialAIType: 0
+      aIObject: {fileID: 0}
+      emoticonType: 0
+      imageObject: {fileID: 0}
+      imageXPosition: 0
+      imageYPosition: 0
+      PracticeSkillType: 0
+    maxTutorialAction: 5
+  - tutorialConditions:
+    - playerObject: {fileID: 0}
+      tutorialPlaceType: 0
+      tutorialConditionType: 4
+      tutorialPlace: {fileID: 1243653099}
+      checkTutorialPlace: {fileID: 1243653101}
+      onMouseType: 0
+      activeType: 0
+      activeMount: 0
+      playerActiveMount: 0
+      interactiveObjectType: 1
+      interactiveMount: 1
+      intersMount: 
+      MAX_INTERS: 100
+    - playerObject: {fileID: 0}
+      tutorialPlaceType: 0
+      tutorialConditionType: 4
+      tutorialPlace: {fileID: 1243653099}
+      checkTutorialPlace: {fileID: 1243653101}
+      onMouseType: 0
+      activeType: 0
+      activeMount: 0
+      playerActiveMount: 0
+      interactiveObjectType: 12
+      interactiveMount: 1
+      intersMount: 
+      MAX_INTERS: 100
+    maxTutorialCondition: 2
+    tutorialActions:
+    - tutorialCanvas: {fileID: 0}
+      playerObject: {fileID: 0}
+      tutorialActionType: 0
+      messageText: "\uC7A5\uC2DD\uC7A5\uC758 \uC0C1\uD638\uC791\uC6A9 \uBC94\uC704\uC5D0\uC11C\n\uC0C1\uD638\uC791\uC6A9\uC744
+        \uD574\uBCF4\uC138\uC694."
+      messageSizeType: 2
+      messageObject: {fileID: 0}
+      messageImageScript: {fileID: 0}
+      waitTime: 0
+      tutorialAIType: 0
+      aIObject: {fileID: 0}
+      emoticonType: 0
+      imageObject: {fileID: 0}
+      imageXPosition: 0
+      imageYPosition: 0
+      PracticeSkillType: 0
+    maxTutorialAction: 1
+  - tutorialConditions:
+    - playerObject: {fileID: 0}
+      tutorialPlaceType: 0
+      tutorialConditionType: 4
+      tutorialPlace: {fileID: 1243653099}
+      checkTutorialPlace: {fileID: 1243653101}
+      onMouseType: 0
+      activeType: 0
+      activeMount: 0
+      playerActiveMount: 0
+      interactiveObjectType: 3
+      interactiveMount: 1
+      intersMount: 
+      MAX_INTERS: 100
+    maxTutorialCondition: 1
+    tutorialActions:
+    - tutorialCanvas: {fileID: 0}
+      playerObject: {fileID: 0}
+      tutorialActionType: 0
+      messageText: "\uC2A4\uD0AC\uC744 \uC0AC\uC6A9 \uD574 \uD6A8\uACFC\uC801\uC73C\uB85C\n\uCD94\uACA9\uC790\uB97C
+        \uD53C\uD574 \uB808\uC2A4\uD1A0\uB791\uC744\n\uC5B4\uC9C0\uB7FD\uD790 \uC218
+        \uC788\uC2B5\uB2C8\uB2E4."
+      messageSizeType: 2
+      messageObject: {fileID: 0}
+      messageImageScript: {fileID: 0}
+      waitTime: 0
+      tutorialAIType: 0
+      aIObject: {fileID: 0}
+      emoticonType: 0
+      imageObject: {fileID: 0}
+      imageXPosition: 0
+      imageYPosition: 0
+      PracticeSkillType: 0
+    maxTutorialAction: 1
+  maxMouseTutorialCount: 6
   catTutorialElements: []
   maxCatTutorialCount: 0
   tutorialPlayerType: 0
@@ -633,7 +900,7 @@ Transform:
   - {fileID: 1665347144}
   - {fileID: 449021433}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &284804413
 MonoBehaviour:
@@ -825,7 +1092,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4826761004538848, guid: 13f8e56a92fb46144835ec42c779aebf, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 224915208530770098, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
@@ -845,7 +1112,7 @@ Prefab:
     - target: {fileID: 224951943951134882, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.2540283
+      value: 3.2540894
       objectReference: {fileID: 0}
     - target: {fileID: 224561863166087208, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
@@ -865,7 +1132,7 @@ Prefab:
     - target: {fileID: 224824886700119104, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.2540283
+      value: 3.2540894
       objectReference: {fileID: 0}
     - target: {fileID: 224140245465577816, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
@@ -945,7 +1212,7 @@ Prefab:
     - target: {fileID: 224175936259934118, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.2540283
+      value: 3.2540894
       objectReference: {fileID: 0}
     - target: {fileID: 224886175744608136, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
@@ -1005,12 +1272,12 @@ Prefab:
     - target: {fileID: 224161418520299384, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 346.18488
+      value: 603.1849
       objectReference: {fileID: 0}
     - target: {fileID: 224161418520299384, guid: 13f8e56a92fb46144835ec42c779aebf,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 193.04274
+      value: 337.54276
       objectReference: {fileID: 0}
     - target: {fileID: 1309746247497648, guid: 13f8e56a92fb46144835ec42c779aebf, type: 2}
       propertyPath: m_IsActive
@@ -1094,7 +1361,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4300903197031932, guid: 275ea692f62cb2d4289a4f211625c0f3, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114434136386367396, guid: 275ea692f62cb2d4289a4f211625c0f3,
         type: 2}
@@ -1200,7 +1467,7 @@ Transform:
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1073554351
 GameObject:
@@ -1325,7 +1592,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1243653099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.03, z: 3.255}
+  m_LocalPosition: {x: -6.738, y: 1.19, z: 2.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 284804412}
@@ -1349,7 +1616,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1243653099}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1433,7 +1700,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4809445212263860, guid: dcdb0d34a1cec9c40b92dd583ce048ab, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1366160352340200, guid: dcdb0d34a1cec9c40b92dd583ce048ab, type: 2}
       propertyPath: m_Name
@@ -1554,12 +1821,12 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1410851051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 345.5, y: 194.5, z: 0}
-  m_LocalScale: {x: 0.35989583, y: 0.35989583, z: 0.35989583}
+  m_LocalPosition: {x: 602.5, y: 339, z: 0}
+  m_LocalScale: {x: 0.6276042, y: 0.6276042, z: 0.6276042}
   m_Children:
   - {fileID: 269368074}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1679,6 +1946,62 @@ Transform:
   m_Father: {fileID: 284804412}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1746915381
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4719361494576042, guid: 72b6e8526f80216479f67a4c1a7786a8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.47719884
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719361494576042, guid: 72b6e8526f80216479f67a4c1a7786a8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719361494576042, guid: 72b6e8526f80216479f67a4c1a7786a8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 9.468789
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719361494576042, guid: 72b6e8526f80216479f67a4c1a7786a8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719361494576042, guid: 72b6e8526f80216479f67a4c1a7786a8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719361494576042, guid: 72b6e8526f80216479f67a4c1a7786a8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719361494576042, guid: 72b6e8526f80216479f67a4c1a7786a8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719361494576042, guid: 72b6e8526f80216479f67a4c1a7786a8, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047000888069552, guid: 72b6e8526f80216479f67a4c1a7786a8, type: 2}
+      propertyPath: m_Name
+      value: InterDrawer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114152698474521906, guid: 72b6e8526f80216479f67a4c1a7786a8,
+        type: 2}
+      propertyPath: viewIdField
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114152698474521906, guid: 72b6e8526f80216479f67a4c1a7786a8,
+        type: 2}
+      propertyPath: instantiationId
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 72b6e8526f80216479f67a4c1a7786a8, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1748984704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,7 +2113,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4561821551834066, guid: aa3f43c0e11e65a49a7c7c24f4a9a2f9, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa3f43c0e11e65a49a7c7c24f4a9a2f9, type: 2}
@@ -1822,7 +2145,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1970770136
 MonoBehaviour:
@@ -1872,7 +2195,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4809445212263860, guid: dcdb0d34a1cec9c40b92dd583ce048ab, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1366160352340200, guid: dcdb0d34a1cec9c40b92dd583ce048ab, type: 2}
       propertyPath: m_Name

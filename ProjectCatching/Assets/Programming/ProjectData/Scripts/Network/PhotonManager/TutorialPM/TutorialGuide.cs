@@ -119,8 +119,31 @@ public class TutorialGuide : MonoBehaviour {
             // 1. 컨디션 모두 확인
             if (mouseTutorialElements[nowTutorialCount].CheckCondition())
             {
-                //2. 액션 모두 사용
-                mouseTutorialElements[nowTutorialCount].UseAction();
+
+                TutorialAction[] tutorialActions =
+                    mouseTutorialElements[nowTutorialCount].tutorialActions;
+
+                int nowActionCount = tutorialActions.Length;
+
+
+
+                for (int i = 0; i < nowActionCount; i++)
+                {
+                    float waitTime = tutorialActions[i].UseAction();
+                    float tempTime = 0.0f;
+
+                    while (true)
+                    {
+                        if (tempTime >= waitTime) break;
+
+                        else {
+                            tempTime += Time.deltaTime;
+                            yield return null;
+                        }
+
+                    }
+                }
+
 
                 nowTutorialCount++;
 

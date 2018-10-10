@@ -9,6 +9,8 @@ public class TutorialCondition{
     const float INFINIFY_DISTANCE = 10000f;
 
 
+    // 기본정보
+    public GameObject playerObject;
 
 
     // 플레이어 도착위치 타입 지정

@@ -22,6 +22,15 @@ public partial class TutorialGuideEditor
             case TutorialAction.EnumTutorialAction.DRAW_IMAGE:
                 DrawImage(nowAction);
                 break;
+            case TutorialAction.EnumTutorialAction.PRACTICE_SKILL:
+                SetPracticeSkill(nowAction);
+                break;
+            case TutorialAction.EnumTutorialAction.RESET_PRACTICE:
+                SetResetSkill(nowAction);
+                break;
+            case TutorialAction.EnumTutorialAction.RESCUE:
+                Rescue(nowAction);
+                break;
         }
     }
 
@@ -42,11 +51,12 @@ public partial class TutorialGuideEditor
         nowAction.waitTime = EditorGUILayout.FloatField("대기시간", nowAction.waitTime);
     }
 
-    void EmotionInspector(TutorialAction nowAction)
+
+    void SetAITarget(string enumText , TutorialAction nowAction)
     {
         //1. 대상
         nowAction.tutorialAIType = (TutorialAction.EnumTutorialAI)EditorGUILayout.EnumPopup
-        ("이모티콘 AI",
+        (enumText,
         nowAction.tutorialAIType);
 
         // 1-1 대상을 토대로 설정
@@ -57,6 +67,12 @@ public partial class TutorialGuideEditor
         {
             nowAction.aIObject = tutorialAI.AI[tutorialAIType];
         }
+    }
+
+
+    void EmotionInspector(TutorialAction nowAction)
+    {
+        SetAITarget("이모티콘 AI", nowAction);
 
         //2. 어떤이모티콘
             nowAction.emoticonType = (TutorialAction.EnumEmoticon)EditorGUILayout.EnumPopup
@@ -82,4 +98,24 @@ public partial class TutorialGuideEditor
 
 
     }
+
+    void SetPracticeSkill(TutorialAction nowAction)
+    {
+        nowAction.PracticeSkillType = (TutorialAction.EnumPracticeSkill)EditorGUILayout.EnumPopup
+            ("연습스킬 선택",
+            nowAction.PracticeSkillType);
+    }
+
+    void SetResetSkill(TutorialAction nowAction)
+    {
+        nowAction.PracticeSkillType = (TutorialAction.EnumPracticeSkill)EditorGUILayout.EnumPopup
+            ("리셋스킬 선택",
+            nowAction.PracticeSkillType);
+    }
+
+    void Rescue(TutorialAction nowAction)
+    {
+        SetAITarget("구출 설정 대상", nowAction);
+    }
+
 }

@@ -33,6 +33,11 @@ public class CoolDown
     // 최대 쿨타임을 나타냅니다.
     public float MaxCoolDown;
 
+    public float tempMaxCoolDown { get; set; }      // 임시 저장용
+    public void ResetCoolDown() { MaxCoolDown = tempMaxCoolDown; }
+    public void PracticeCoolDown() { MaxCoolDown = 1.0f; NowCoolDown = 0.0f; }
+
+
     // 시간 당 쿨타임 감소
     public void DecreaseCoolDown()
     {
